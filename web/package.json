@@ -1,0 +1,27 @@
+{
+  "name": "batchflow-console",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5179",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "preview": "vite preview --host 127.0.0.1 --port 5179"
+  },
+  "dependencies": {
+    "lucide-vue-next": "0.468.0",
+    "vue": "3.5.24"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "6.0.2",
+    "@vue/test-utils": "^2.6.0",
+    "happy-dom": "^21.0.4",
+    "typescript": "5.9.3",
+    "vite": "7.2.2",
+    "vitest": "3.2.4",
+    "vue-tsc": "3.1.4"
+  }
+}

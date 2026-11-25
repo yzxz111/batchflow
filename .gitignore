@@ -1,0 +1,13 @@
+.runtime/
+.tools/
+**/target/
+web/node_modules/
+web/dist/
+web/.vite/
+*.log
+.DS_Store
+.idea/
+*.iml
+.vscode/
+test-results/
+playwright-report/

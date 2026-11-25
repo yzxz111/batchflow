@@ -1,0 +1,46 @@
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  port: ${SERVER_PORT:18090}
+spring:
+  application:
+    name: batchflow
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://127.0.0.1:15439/batchflow}
+    username: ${DATABASE_USER:batchflow}
+    password: ${DATABASE_PASSWORD:}
+    hikari:
+      maximum-pool-size: 8
+      connection-timeout: 10000
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 51MB
+  task:
+    scheduling:
+      pool:
+        size: 4
+  rabbitmq:
+    host: ${RABBITMQ_HOST:127.0.0.1}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:batchflow}
+    password: ${RABBITMQ_PASSWORD:batchflow-local}
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        prefetch: 1
+        default-requeue-rejected: true
+app:
+  role: ${APP_ROLE:api}
+  queue-mode: ${APP_QUEUE_MODE:database}
+  storage-dir: ${APP_STORAGE_DIR:../.runtime/storage}
+  worker:
+    lease-seconds: ${WORKER_LEASE_SECONDS:15}
+    batch-delay-ms: ${WORKER_BATCH_DELAY_MS:0}
+    poll-ms: ${WORKER_POLL_MS:1000}
+logging:
+  level:
+    com.batchflow: INFO
+    org.springframework.amqp.rabbit.listener: WARN
