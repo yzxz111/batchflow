@@ -24,7 +24,7 @@
 
 ## 2. 自动化测试、构建与等价 CI 校验
 
-本地已初始化 Git 仓库并按 `.github/workflows/ci.yml` 的校验步骤顺序执行通过。以下为本机报告；后续已关联私有 GitHub 仓库并完成远端实跑，结果另见第 7 节：
+本地已初始化 Git 仓库并按 `.github/workflows/ci.yml` 的校验步骤顺序执行通过。以下为本机报告；后续已关联 GitHub 仓库并完成远端实跑，结果另见第 7 节：
 
 ### 前端（`web/`）
 
@@ -129,7 +129,7 @@
 ## 7. Docker 与 GitHub Actions 实机验收
 
 - **本机历史环境限制**：本机 Docker 预检为 [BLOCKED / docker_preflight](evidence/20261125-closeout-02/container-preflight/report.json)，因为没有 Docker CLI；本机未执行容器构建、`compose config` 或真实容器验收。该原始记录保留，后续远端成功不改写本机历史状态。
-- **远端运行**：私有仓库 [yzxz111/batchflow](https://github.com/yzxz111/batchflow)，[GitHub Actions 45583013308](https://github.com/yzxz111/batchflow/actions/runs/45583013308)，首次运行（attempt 1），受测提交 `4f908cab0ad9320d684ec15e136726aff8942987`。运行时间 **2026-11-25 17:11:18–17:16:09（北京时间，结束时间按 GitHub updatedAt）**；`verify` job 为 **17:11:21–17:12:45**，`compose-smoke` 为 **17:12:48–17:16:08**，均成功。
+- **远端运行**：仓库 [yzxz111/batchflow](https://github.com/yzxz111/batchflow)（验收时私有，现已公开），[GitHub Actions 45583013308](https://github.com/yzxz111/batchflow/actions/runs/45583013308)，首次运行（attempt 1），受测提交 `4f908cab0ad9320d684ec15e136726aff8942987`。运行时间 **2026-11-25 17:11:18–17:16:09（北京时间，结束时间按 GitHub updatedAt）**；`verify` job 为 **17:11:21–17:12:45**，`compose-smoke` 为 **17:12:48–17:16:08**，均成功。
 - **前后端测试与构建**：远端前端 **87/87**、后端 **33/33**，均零失败、零跳过；前端类型检查与构建、Maven 测试与打包全部通过。原始 [Vitest JSON](evidence/github-actions/45583013308/test-reports/test-results/frontend/vitest.json)、[Surefire 报告](evidence/github-actions/45583013308/test-reports/backend/target/surefire-reports/)及构建日志独立保存。
 - **真实 Compose 验收**：`scripts/verify-compose.mjs` 在 GitHub runner 的 Docker **29.4.2**、Compose **5.1.3** 上运行，报告时间 **17:12:52–17:16:04（北京时间）**，**9 项检查全部 PASSED**。容器档 RabbitMQ 使用 `rabbitmq:4.1-management` 标签，不沿用本机 RabbitMQ 4.4.1 的版本口径。原始 [Compose report.json](evidence/github-actions/45583013308/compose-smoke-evidence/2026-11-25T09-12-52-640Z-b282b646/report.json)记录各阶段时间、结果、任务与清理状态：
 

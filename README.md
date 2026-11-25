@@ -2,6 +2,8 @@
 
 以**商品 CSV 批量导入**为真实业务场景的 Java 后端／全栈作品。用户上传文件、映射字段、提交任务，在工作台查看处理进度和错误明细；API 与 Worker 独立运行，任务状态和已提交批次保存在 PostgreSQL。
 
+公开源码仓库：[yzxz111/batchflow](https://github.com/yzxz111/batchflow)，可直接查看源码、文档与验收记录。
+
 项目重点是把“后台处理”做得可解释、可恢复、可验证：每批商品写入、错误行写入与检查点更新使用同一数据库事务，Worker 通过租约领取任务，并以 fencing token 防止过期 Worker 继续提交。
 
 > 第一版中的“调度”指任务分发、租约接管和失败重试。当前范围不包含 cron 定时任务、DAG 编排、多租户或账号体系。项目没有可据以宣称生产级吞吐量的压测结果。
@@ -113,7 +115,7 @@ $env:BATCHFLOW_TEST_DB_PASSWORD = ''
 .\scripts\mvn.ps1 -f backend/pom.xml verify
 ```
 
-`.github/workflows/ci.yml` 配置了独立 PostgreSQL service、前端测试／类型检查／构建，以及 Maven 测试与打包。2026-11-25 已在私有仓库 [yzxz111/batchflow](https://github.com/yzxz111/batchflow) 完成[首次 GitHub Actions 实跑](https://github.com/yzxz111/batchflow/actions/runs/45583013308)：受测提交 `4f908cab0ad9320d684ec15e136726aff8942987`，前端 **87/87**、后端 **33/33**、类型检查与构建全部通过；原始报告见 [远端验收证据](docs/evidence/github-actions/45583013308/)。
+`.github/workflows/ci.yml` 配置了独立 PostgreSQL service、前端测试／类型检查／构建，以及 Maven 测试与打包。2026-11-25 已在仓库 [yzxz111/batchflow](https://github.com/yzxz111/batchflow) 完成[首次 GitHub Actions 实跑](https://github.com/yzxz111/batchflow/actions/runs/45583013308)：受测提交 `4f908cab0ad9320d684ec15e136726aff8942987`，前端 **87/87**、后端 **33/33**、类型检查与构建全部通过；原始报告见 [远端验收证据](docs/evidence/github-actions/45583013308/)。
 
 ## 故障恢复演示
 
