@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "status": "PASSED",
+  "startedAt": "2026-11-25T09:12:52.640Z",
+  "commit": "4f908cab0ad9320d684ec15e136726aff8942987",
+  "project": "batchflow-smoke-62278292-39f",
+  "reportDir": "/home/runner/work/batchflow/batchflow/test-results/compose/2026-11-25T09-12-52-640Z-b282b646",
+  "checks": [
+    {
+      "name": "docker_preflight",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:12:52.642Z",
+      "finishedAt": "2026-11-25T09:12:52.880Z",
+      "details": {
+        "serverVersion": "\"29.4.2\"",
+        "composeVersion": "5.1.3"
+      }
+    },
+    {
+      "name": "compose_configuration",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:12:52.898Z",
+      "finishedAt": "2026-11-25T09:12:53.056Z",
+      "details": {
+        "project": "batchflow-smoke-62278292-39f",
+        "ports": {
+          "api": 43667,
+          "postgres": 45303,
+          "rabbitmq": 45681,
+          "rabbitmqManagement": 33257
+        }
+      }
+    },
+    {
+      "name": "compose_image_build",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:12:53.056Z",
+      "finishedAt": "2026-11-25T09:14:47.629Z",
+      "details": {
+        "image": "batchflow-smoke-62278292-39f:local"
+      }
+    },
+    {
+      "name": "compose_health_and_frontend",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:14:47.631Z",
+      "finishedAt": "2026-11-25T09:15:25.227Z",
+      "details": {
+        "api": {
+          "status": "UP",
+          "role": "api",
+          "queueMode": "rabbitmq"
+        },
+        "worker": {
+          "status": "UP",
+          "role": "worker",
+          "queueMode": "rabbitmq"
+        }
+      }
+    },
+    {
+      "name": "http_mixed_csv_import",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:15:25.228Z",
+      "finishedAt": "2026-11-25T09:15:28.732Z",
+      "details": {
+        "id": "31065fa2-1a72-490a-a5f1-f7cb1fb01407",
+        "name": "Compose-mixed-120",
+        "filename": "mixed-120.csv",
+        "status": "COMPLETED_WITH_ERRORS",
+        "totalRows": 120,
+        "processedRows": 120,
+        "successRows": 116,
+        "errorRows": 4,
+        "progress": 100,
+        "batchSize": 40,
+        "attempt": 1,
+        "maxAttempts": 3,
+        "checkpoint": 120,
+        "workerId": null,
+        "createdAt": "2026-11-25T09:15:25.373993Z",
+        "startedAt": "2026-11-25T09:15:26.175667Z",
+        "finishedAt": "2026-11-25T09:15:28.672790Z",
+        "lastHeartbeatAt": "2026-11-25T09:15:27.919935Z",
+        "lastError": null,
+        "events": [
+          {
+            "id": 1,
+            "type": "CREATED",
+            "message": "任务已创建，等待 Worker 领取",
+            "createdAt": "2026-11-25T09:15:25.373993Z"
+          },
+          {
+            "id": 2,
+            "type": "STARTED",
+            "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+            "createdAt": "2026-11-25T09:15:26.175667Z"
+          },
+          {
+            "id": 3,
+            "type": "COMPLETED",
+            "message": "导入完成：成功 116 行，错误 4 行",
+            "createdAt": "2026-11-25T09:15:28.672790Z"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rabbitmq_busy_worker_four_tasks",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:15:28.736Z",
+      "finishedAt": "2026-11-25T09:15:41.728Z",
+      "details": [
+        {
+          "id": "c0ae72c7-4cf0-47c8-8b9d-75376e4b4c61",
+          "name": "Compose-burst-1",
+          "filename": "burst-1.csv",
+          "status": "COMPLETED",
+          "totalRows": 200,
+          "processedRows": 200,
+          "successRows": 200,
+          "errorRows": 0,
+          "progress": 100,
+          "batchSize": 50,
+          "attempt": 1,
+          "maxAttempts": 3,
+          "checkpoint": 200,
+          "workerId": null,
+          "createdAt": "2026-11-25T09:15:28.783668Z",
+          "startedAt": "2026-11-25T09:15:32.334408Z",
+          "finishedAt": "2026-11-25T09:15:35.476176Z",
+          "lastHeartbeatAt": "2026-11-25T09:15:34.723359Z",
+          "lastError": null,
+          "events": [
+            {
+              "id": 5,
+              "type": "CREATED",
+              "message": "任务已创建，等待 Worker 领取",
+              "createdAt": "2026-11-25T09:15:28.783668Z"
+            },
+            {
+              "id": 10,
+              "type": "STARTED",
+              "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+              "createdAt": "2026-11-25T09:15:32.334408Z"
+            },
+            {
+              "id": 11,
+              "type": "COMPLETED",
+              "message": "导入完成：成功 200 行，错误 0 行",
+              "createdAt": "2026-11-25T09:15:35.476176Z"
+            }
+          ]
+        },
+        {
+          "id": "e862af6f-1560-484e-b9c0-0b1308cc58fb",
+          "name": "Compose-burst-2",
+          "filename": "burst-2.csv",
+          "status": "COMPLETED",
+          "totalRows": 200,
+          "processedRows": 200,
+          "successRows": 200,
+          "errorRows": 0,
+          "progress": 100,
+          "batchSize": 50,
+          "attempt": 1,
+          "maxAttempts": 3,
+          "checkpoint": 200,
+          "workerId": null,
+          "createdAt": "2026-11-25T09:15:28.785666Z",
+          "startedAt": "2026-11-25T09:15:29.174518Z",
+          "finishedAt": "2026-11-25T09:15:32.324800Z",
+          "lastHeartbeatAt": "2026-11-25T09:15:31.572191Z",
+          "lastError": null,
+          "events": [
+            {
+              "id": 4,
+              "type": "CREATED",
+              "message": "任务已创建，等待 Worker 领取",
+              "createdAt": "2026-11-25T09:15:28.785666Z"
+            },
+            {
+              "id": 8,
+              "type": "STARTED",
+              "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+              "createdAt": "2026-11-25T09:15:29.174518Z"
+            },
+            {
+              "id": 9,
+              "type": "COMPLETED",
+              "message": "导入完成：成功 200 行，错误 0 行",
+              "createdAt": "2026-11-25T09:15:32.324800Z"
+            }
+          ]
+        },
+        {
+          "id": "f2e15df4-6df2-40b7-97e1-acad4915a90b",
+          "name": "Compose-burst-3",
+          "filename": "burst-3.csv",
+          "status": "COMPLETED",
+          "totalRows": 200,
+          "processedRows": 200,
+          "successRows": 200,
+          "errorRows": 0,
+          "progress": 100,
+          "batchSize": 50,
+          "attempt": 1,
+          "maxAttempts": 3,
+          "checkpoint": 200,
+          "workerId": null,
+          "createdAt": "2026-11-25T09:15:28.791700Z",
+          "startedAt": "2026-11-25T09:15:38.574775Z",
+          "finishedAt": "2026-11-25T09:15:41.654080Z",
+          "lastHeartbeatAt": "2026-11-25T09:15:40.901889Z",
+          "lastError": null,
+          "events": [
+            {
+              "id": 7,
+              "type": "CREATED",
+              "message": "任务已创建，等待 Worker 领取",
+              "createdAt": "2026-11-25T09:15:28.791700Z"
+            },
+            {
+              "id": 14,
+              "type": "STARTED",
+              "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+              "createdAt": "2026-11-25T09:15:38.574775Z"
+            },
+            {
+              "id": 15,
+              "type": "COMPLETED",
+              "message": "导入完成：成功 200 行，错误 0 行",
+              "createdAt": "2026-11-25T09:15:41.654080Z"
+            }
+          ]
+        },
+        {
+          "id": "c3a2125e-bec9-4bd1-beff-75efe7283826",
+          "name": "Compose-burst-4",
+          "filename": "burst-4.csv",
+          "status": "COMPLETED",
+          "totalRows": 200,
+          "processedRows": 200,
+          "successRows": 200,
+          "errorRows": 0,
+          "progress": 100,
+          "batchSize": 50,
+          "attempt": 1,
+          "maxAttempts": 3,
+          "checkpoint": 200,
+          "workerId": null,
+          "createdAt": "2026-11-25T09:15:28.792155Z",
+          "startedAt": "2026-11-25T09:15:35.479248Z",
+          "finishedAt": "2026-11-25T09:15:38.572072Z",
+          "lastHeartbeatAt": "2026-11-25T09:15:37.820905Z",
+          "lastError": null,
+          "events": [
+            {
+              "id": 6,
+              "type": "CREATED",
+              "message": "任务已创建，等待 Worker 领取",
+              "createdAt": "2026-11-25T09:15:28.792155Z"
+            },
+            {
+              "id": 12,
+              "type": "STARTED",
+              "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+              "createdAt": "2026-11-25T09:15:35.479248Z"
+            },
+            {
+              "id": 13,
+              "type": "COMPLETED",
+              "message": "导入完成：成功 200 行，错误 0 行",
+              "createdAt": "2026-11-25T09:15:38.572072Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "worker_sigkill_checkpoint_recovery",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:15:41.729Z",
+      "finishedAt": "2026-11-25T09:16:00.407Z",
+      "details": {
+        "observed": {
+          "id": "6c73942f-9f77-4c07-a80b-02871cffa6df",
+          "name": "Compose-recovery-1200",
+          "filename": "recovery-1200.csv",
+          "status": "RUNNING",
+          "totalRows": 1200,
+          "processedRows": 100,
+          "successRows": 96,
+          "errorRows": 4,
+          "progress": 8.33,
+          "batchSize": 100,
+          "attempt": 1,
+          "maxAttempts": 3,
+          "checkpoint": 100,
+          "workerId": "worker-0628e671-a8f",
+          "createdAt": "2026-11-25T09:15:41.752870Z",
+          "startedAt": "2026-11-25T09:15:42.223019Z",
+          "finishedAt": null,
+          "lastHeartbeatAt": "2026-11-25T09:15:42.265365Z",
+          "lastError": null,
+          "events": [
+            {
+              "id": 16,
+              "type": "CREATED",
+              "message": "任务已创建，等待 Worker 领取",
+              "createdAt": "2026-11-25T09:15:41.752870Z"
+            },
+            {
+              "id": 17,
+              "type": "STARTED",
+              "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+              "createdAt": "2026-11-25T09:15:42.223019Z"
+            }
+          ]
+        },
+        "persisted": {
+          "id": "6c73942f-9f77-4c07-a80b-02871cffa6df",
+          "name": "Compose-recovery-1200",
+          "filename": "recovery-1200.csv",
+          "status": "RUNNING",
+          "totalRows": 1200,
+          "processedRows": 100,
+          "successRows": 96,
+          "errorRows": 4,
+          "progress": 8.33,
+          "batchSize": 100,
+          "attempt": 1,
+          "maxAttempts": 3,
+          "checkpoint": 100,
+          "workerId": "worker-0628e671-a8f",
+          "createdAt": "2026-11-25T09:15:41.752870Z",
+          "startedAt": "2026-11-25T09:15:42.223019Z",
+          "finishedAt": null,
+          "lastHeartbeatAt": "2026-11-25T09:15:42.265365Z",
+          "lastError": null,
+          "events": [
+            {
+              "id": 16,
+              "type": "CREATED",
+              "message": "任务已创建，等待 Worker 领取",
+              "createdAt": "2026-11-25T09:15:41.752870Z"
+            },
+            {
+              "id": 17,
+              "type": "STARTED",
+              "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+              "createdAt": "2026-11-25T09:15:42.223019Z"
+            }
+          ]
+        },
+        "final": {
+          "id": "6c73942f-9f77-4c07-a80b-02871cffa6df",
+          "name": "Compose-recovery-1200",
+          "filename": "recovery-1200.csv",
+          "status": "COMPLETED_WITH_ERRORS",
+          "totalRows": 1200,
+          "processedRows": 1200,
+          "successRows": 1152,
+          "errorRows": 48,
+          "progress": 100,
+          "batchSize": 100,
+          "attempt": 2,
+          "maxAttempts": 3,
+          "checkpoint": 1200,
+          "workerId": null,
+          "createdAt": "2026-11-25T09:15:41.752870Z",
+          "startedAt": "2026-11-25T09:15:42.223019Z",
+          "finishedAt": "2026-11-25T09:16:00.289917Z",
+          "lastHeartbeatAt": "2026-11-25T09:15:59.536977Z",
+          "lastError": null,
+          "events": [
+            {
+              "id": 16,
+              "type": "CREATED",
+              "message": "任务已创建，等待 Worker 领取",
+              "createdAt": "2026-11-25T09:15:41.752870Z"
+            },
+            {
+              "id": 17,
+              "type": "STARTED",
+              "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+              "createdAt": "2026-11-25T09:15:42.223019Z"
+            },
+            {
+              "id": 18,
+              "type": "RECOVERED",
+              "message": "接管失联任务，从第 100 行检查点继续；Worker worker-8699a1bd-f10",
+              "createdAt": "2026-11-25T09:15:51.382455Z"
+            },
+            {
+              "id": 19,
+              "type": "COMPLETED",
+              "message": "导入完成：成功 1152 行，错误 48 行",
+              "createdAt": "2026-11-25T09:16:00.289917Z"
+            }
+          ]
+        },
+        "productCount": 1152
+      }
+    },
+    {
+      "name": "database_counts_and_sku_uniqueness",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:16:00.407Z",
+      "finishedAt": "2026-11-25T09:16:00.537Z",
+      "details": {
+        "invalidCounts": 0,
+        "duplicateSkus": 0,
+        "tasks": [
+          {
+            "id": "31065fa2-1a72-490a-a5f1-f7cb1fb01407",
+            "products": 116,
+            "errors": 4
+          },
+          {
+            "id": "e862af6f-1560-484e-b9c0-0b1308cc58fb",
+            "products": 200,
+            "errors": 0
+          },
+          {
+            "id": "c0ae72c7-4cf0-47c8-8b9d-75376e4b4c61",
+            "products": 200,
+            "errors": 0
+          },
+          {
+            "id": "c3a2125e-bec9-4bd1-beff-75efe7283826",
+            "products": 200,
+            "errors": 0
+          },
+          {
+            "id": "f2e15df4-6df2-40b7-97e1-acad4915a90b",
+            "products": 200,
+            "errors": 0
+          },
+          {
+            "id": "6c73942f-9f77-4c07-a80b-02871cffa6df",
+            "products": 1152,
+            "errors": 48
+          }
+        ]
+      }
+    },
+    {
+      "name": "outbox_published_and_broker_queue_drained",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T09:16:00.537Z",
+      "finishedAt": "2026-11-25T09:16:01.483Z",
+      "details": {
+        "pendingOutbox": 0,
+        "queue": "batchflow.imports",
+        "messages": 0,
+        "ready": 0,
+        "unacknowledged": 0
+      }
+    }
+  ],
+  "ports": {
+    "api": 43667,
+    "postgres": 45303,
+    "rabbitmq": 45681,
+    "rabbitmqManagement": 33257
+  },
+  "image": "batchflow-smoke-62278292-39f:local",
+  "cleanup": {
+    "logsSaved": true,
+    "stateSaved": true,
+    "projectRemoved": true
+  },
+  "imageRemoved": true,
+  "finishedAt": "2026-11-25T09:16:04.114Z"
+}

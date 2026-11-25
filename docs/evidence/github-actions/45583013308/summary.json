@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "status": "PASSED",
+  "repository": "yzxz111/batchflow",
+  "privateRepository": true,
+  "runId": 45583013308,
+  "runAttempt": 1,
+  "runUrl": "https://github.com/yzxz111/batchflow/actions/runs/45583013308",
+  "testedCommit": "4f908cab0ad9320d684ec15e136726aff8942987",
+  "startedAt": "2026-11-25T09:11:18Z",
+  "runMetadataUpdatedAt": "2026-11-25T09:16:09Z",
+  "startedAtShanghai": "2026-11-25T17:11:18+08:00",
+  "runMetadataUpdatedAtShanghai": "2026-11-25T17:16:09+08:00",
+  "jobs": [
+    {
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-25T09:11:21Z",
+      "completedAt": "2026-11-25T09:12:45Z",
+      "url": "https://github.com/yzxz111/batchflow/actions/runs/45583013308/job/139097489866"
+    },
+    {
+      "name": "compose-smoke",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-25T09:12:48Z",
+      "completedAt": "2026-11-25T09:16:08Z",
+      "url": "https://github.com/yzxz111/batchflow/actions/runs/45583013308/job/139098273533"
+    }
+  ],
+  "frontend": {
+    "tests": 87,
+    "passed": 87,
+    "failed": 0,
+    "skipped": 0,
+    "report": "test-reports/test-results/frontend/vitest.json"
+  },
+  "backend": {
+    "tests": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": [
+      {
+        "name": "com.batchflow.BatchFlowIntegrationTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.batchflow.CsvAndValidatorTest",
+        "tests": 22,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.batchflow.WorkerRunnerAndRabbitDispatchTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  "compose": {
+    "status": "PASSED",
+    "checkCount": 9,
+    "report": "compose-smoke-evidence/2026-11-25T09-12-52-640Z-b282b646/report.json",
+    "startedAt": "2026-11-25T09:12:52.640Z",
+    "finishedAt": "2026-11-25T09:16:04.114Z",
+    "dockerVersion": "29.4.2",
+    "composeVersion": "5.1.3",
+    "recoveryCheckpoint": 100,
+    "recoveryTotalRows": 1200,
+    "recoverySuccessRows": 1152,
+    "recoveryErrorRows": 48,
+    "recoveryAttempt": 2,
+    "databaseInvalidCounts": 0,
+    "duplicateSkus": 0,
+    "pendingOutbox": 0,
+    "queueMessages": 0,
+    "queueReady": 0,
+    "queueUnacknowledged": 0,
+    "externalCommandsPassed": 18,
+    "projectRemoved": true,
+    "imageRemoved": true
+  },
+  "artifacts": [
+    {
+      "name": "test-reports",
+      "id": 15007062395,
+      "file": "test-reports.zip",
+      "sizeBytes": 34876,
+      "sha256": "AC5BDAD8AFE8451F39950D04E04E5201CE7A608224AA39D25EB7BC35118DC0C3",
+      "githubDigestMatched": true,
+      "extractedFilesMatched": true
+    },
+    {
+      "name": "compose-smoke-evidence",
+      "id": 15006773776,
+      "file": "compose-smoke-evidence.zip",
+      "sizeBytes": 89895,
+      "sha256": "E60029259A3E98FA46D5BBD42275410CEB662B5182AE411331CE2BAD57BCB231",
+      "githubDigestMatched": true,
+      "extractedFilesMatched": true
+    }
+  ],
+  "scope": "GitHub Actions Linux runner with PostgreSQL 17, RabbitMQ 4.1-management, API and Worker containers. This is isolated CI acceptance, not public production deployment or a local Docker installation.",
+  "archivedAt": "2026-11-25T09:18:40.942097+00:00"
+}

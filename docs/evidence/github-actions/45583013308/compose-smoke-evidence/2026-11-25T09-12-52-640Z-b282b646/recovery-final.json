@@ -1,0 +1,47 @@
+{
+  "id": "6c73942f-9f77-4c07-a80b-02871cffa6df",
+  "name": "Compose-recovery-1200",
+  "filename": "recovery-1200.csv",
+  "status": "COMPLETED_WITH_ERRORS",
+  "totalRows": 1200,
+  "processedRows": 1200,
+  "successRows": 1152,
+  "errorRows": 48,
+  "progress": 100,
+  "batchSize": 100,
+  "attempt": 2,
+  "maxAttempts": 3,
+  "checkpoint": 1200,
+  "workerId": null,
+  "createdAt": "2026-11-25T09:15:41.752870Z",
+  "startedAt": "2026-11-25T09:15:42.223019Z",
+  "finishedAt": "2026-11-25T09:16:00.289917Z",
+  "lastHeartbeatAt": "2026-11-25T09:15:59.536977Z",
+  "lastError": null,
+  "events": [
+    {
+      "id": 16,
+      "type": "CREATED",
+      "message": "任务已创建，等待 Worker 领取",
+      "createdAt": "2026-11-25T09:15:41.752870Z"
+    },
+    {
+      "id": 17,
+      "type": "STARTED",
+      "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+      "createdAt": "2026-11-25T09:15:42.223019Z"
+    },
+    {
+      "id": 18,
+      "type": "RECOVERED",
+      "message": "接管失联任务，从第 100 行检查点继续；Worker worker-8699a1bd-f10",
+      "createdAt": "2026-11-25T09:15:51.382455Z"
+    },
+    {
+      "id": 19,
+      "type": "COMPLETED",
+      "message": "导入完成：成功 1152 行，错误 48 行",
+      "createdAt": "2026-11-25T09:16:00.289917Z"
+    }
+  ]
+}

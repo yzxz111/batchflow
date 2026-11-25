@@ -1,0 +1,226 @@
+ Image rabbitmq:4.1-management Pulling 
+ Image postgres:17-alpine Pulling 
+ b88a5d98edb6 Pulling fs layer 0B
+ 881fc932939e Pulling fs layer 0B
+ 5bc1f3ef349d Pulling fs layer 0B
+ 329a9259bb19 Pulling fs layer 0B
+ c795bf66a383 Pulling fs layer 0B
+ 517559d123bd Pulling fs layer 0B
+ 3834788888c5 Pulling fs layer 0B
+ 347a7fa9ed72 Pulling fs layer 0B
+ 3bfefdb8e856 Pulling fs layer 0B
+ b1187565f6f3 Pulling fs layer 0B
+ 4b1d6d1c1626 Pulling fs layer 0B
+ 8e8df94085bf Pulling fs layer 0B
+ da5c4dbad5f0 Pulling fs layer 0B
+ 22d2dd7b534a Pulling fs layer 0B
+ 3287bd24a1d5 Pulling fs layer 0B
+ 505f81679390 Pulling fs layer 0B
+ 5d1f9bc8e8b4 Pulling fs layer 0B
+ a92b16448b03 Pulling fs layer 0B
+ 0a824b663148 Pulling fs layer 0B
+ 26d7cb3396a8 Pulling fs layer 0B
+ 3bfefdb8e856 Download complete 0B
+ b88a5d98edb6 Download complete 0B
+ 881fc932939e Downloading 1.049MB
+ b1187565f6f3 Downloading 9.018MB
+ 4b1d6d1c1626 Download complete 0B
+ 3834788888c5 Download complete 0B
+ 347a7fa9ed72 Download complete 0B
+ a92b16448b03 Download complete 0B
+ 5bc1f3ef349d Download complete 0B
+ 517559d123bd Download complete 0B
+ 329a9259bb19 Download complete 0B
+ c795bf66a383 Downloading 3.146MB
+ 5d1f9bc8e8b4 Download complete 0B
+ 0a824b663148 Download complete 0B
+ 26d7cb3396a8 Download complete 0B
+ 881fc932939e Download complete 0B
+ 3287bd24a1d5 Download complete 0B
+ 505f81679390 Downloading 2.097MB
+ b1187565f6f3 Download complete 0B
+ 8e8df94085bf Downloading 4.194MB
+ da5c4dbad5f0 Downloading 4.58MB
+ 22d2dd7b534a Downloading 2.097MB
+ 881fc932939e Extracting 1B
+ c795bf66a383 Downloading 6.291MB
+ 376f4d22df63 Downloading 15.64kB
+ 505f81679390 Downloading 6.291MB
+ 8e8df94085bf Downloading 8.389MB
+ da5c4dbad5f0 Download complete 0B
+ 22d2dd7b534a Downloading 5.243MB
+ 881fc932939e Extracting 1B
+ d6bd5d959dd4 Download complete 0B
+ c795bf66a383 Downloading 10.49MB
+ fc266ea8b801 Downloading 39.83kB
+ 22d2dd7b534a Downloading 9.437MB
+ 376f4d22df63 Download complete 0B
+ 505f81679390 Downloading 9.437MB
+ 8e8df94085bf Downloading 12.58MB
+ 881fc932939e Extracting 1B
+ 505f81679390 Downloading 13.63MB
+ c795bf66a383 Downloading 13.63MB
+ e22c94108ead Download complete 0B
+ fc266ea8b801 Download complete 0B
+ 8e8df94085bf Downloading 17.83MB
+ 22d2dd7b534a Downloading 13.63MB
+ 5bc1f3ef349d Pull complete 0B
+ 329a9259bb19 Extracting 1B
+ 881fc932939e Pull complete 0B
+ c795bf66a383 Downloading 18.87MB
+ 505f81679390 Downloading 20.97MB
+ 8e8df94085bf Downloading 23.07MB
+ 22d2dd7b534a Downloading 19.92MB
+ 329a9259bb19 Pull complete 0B
+ 8e8df94085bf Download complete 0B
+ 22d2dd7b534a Downloading 27.26MB
+ c795bf66a383 Downloading 27.26MB
+ 505f81679390 Download complete 0B
+ 3bfefdb8e856 Pull complete 0B
+ 8e8df94085bf Extracting 1B
+ 22d2dd7b534a Downloading 37.75MB
+ c795bf66a383 Downloading 33.55MB
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Downloading 44.04MB
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Downloading 59.77MB
+ 22d2dd7b534a Download complete 0B
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Downloading 75.5MB
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Downloading 88.08MB
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Downloading 102.8MB
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Downloading 112.6MB
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Downloading 112.6MB
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Download complete 0B
+ c795bf66a383 Extracting 1B
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Extracting 1B
+ 8e8df94085bf Extracting 1B
+ c795bf66a383 Extracting 1B
+ 8e8df94085bf Extracting 2B
+ c795bf66a383 Extracting 1B
+ 8e8df94085bf Extracting 2B
+ c795bf66a383 Extracting 1B
+ 8e8df94085bf Extracting 2B
+ c795bf66a383 Extracting 1B
+ 8e8df94085bf Extracting 2B
+ c795bf66a383 Extracting 1B
+ 8e8df94085bf Pull complete 0B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 1B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 1B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 1B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 1B
+ c795bf66a383 Extracting 2B
+ 22d2dd7b534a Extracting 2B
+ c795bf66a383 Extracting 2B
+ b1187565f6f3 Extracting 1B
+ 22d2dd7b534a Pull complete 0B
+ c795bf66a383 Extracting 2B
+ b1187565f6f3 Extracting 1B
+ c795bf66a383 Extracting 2B
+ b1187565f6f3 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 3287bd24a1d5 Pull complete 0B
+ b1187565f6f3 Pull complete 0B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ 505f81679390 Extracting 1B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 3B
+ c795bf66a383 Extracting 4B
+ 505f81679390 Extracting 1B
+ c795bf66a383 Extracting 4B
+ 5d1f9bc8e8b4 Extracting 1B
+ 505f81679390 Pull complete 0B
+ 4b1d6d1c1626 Pull complete 0B
+ a92b16448b03 Pull complete 0B
+ 5d1f9bc8e8b4 Pull complete 0B
+ 0a824b663148 Pull complete 0B
+ 26d7cb3396a8 Pull complete 0B
+ da5c4dbad5f0 Extracting 1B
+ c795bf66a383 Extracting 4B
+ da5c4dbad5f0 Extracting 1B
+ c795bf66a383 Extracting 4B
+ da5c4dbad5f0 Pull complete 0B
+ Image rabbitmq:4.1-management Pulled 
+ c795bf66a383 Extracting 4B
+ c795bf66a383 Extracting 4B
+ c795bf66a383 Extracting 4B
+ 3834788888c5 Pull complete 0B
+ 347a7fa9ed72 Pull complete 0B
+ 517559d123bd Pull complete 0B
+ c795bf66a383 Pull complete 0B
+ b88a5d98edb6 Pull complete 0B
+ Image postgres:17-alpine Pulled 
+ Network batchflow-smoke-62278292-39f_default Creating 
+ Network batchflow-smoke-62278292-39f_default Created 
+ Volume batchflow-smoke-62278292-39f_rabbitmq-data Creating 
+ Volume batchflow-smoke-62278292-39f_rabbitmq-data Created 
+ Volume batchflow-smoke-62278292-39f_import-storage Creating 
+ Volume batchflow-smoke-62278292-39f_import-storage Created 
+ Volume batchflow-smoke-62278292-39f_postgres-data Creating 
+ Volume batchflow-smoke-62278292-39f_postgres-data Created 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Creating 
+ Container batchflow-smoke-62278292-39f-postgres-1 Creating 
+ Container batchflow-smoke-62278292-39f-postgres-1 Created 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Created 
+ Container batchflow-smoke-62278292-39f-api-1 Creating 
+ Container batchflow-smoke-62278292-39f-api-1 Created 
+ Container batchflow-smoke-62278292-39f-worker-1 Creating 
+ Container batchflow-smoke-62278292-39f-worker-1 Created 
+ Container batchflow-smoke-62278292-39f-postgres-1 Starting 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Starting 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Started 
+ Container batchflow-smoke-62278292-39f-postgres-1 Started 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Waiting 
+ Container batchflow-smoke-62278292-39f-postgres-1 Waiting 
+ Container batchflow-smoke-62278292-39f-postgres-1 Healthy 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Healthy 
+ Container batchflow-smoke-62278292-39f-api-1 Starting 
+ Container batchflow-smoke-62278292-39f-api-1 Started 
+ Container batchflow-smoke-62278292-39f-api-1 Waiting 
+ Container batchflow-smoke-62278292-39f-api-1 Healthy 
+ Container batchflow-smoke-62278292-39f-worker-1 Starting 
+ Container batchflow-smoke-62278292-39f-worker-1 Started 
+ Container batchflow-smoke-62278292-39f-postgres-1 Waiting 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Waiting 
+ Container batchflow-smoke-62278292-39f-api-1 Waiting 
+ Container batchflow-smoke-62278292-39f-worker-1 Waiting 
+ Container batchflow-smoke-62278292-39f-api-1 Healthy 
+ Container batchflow-smoke-62278292-39f-postgres-1 Healthy 
+ Container batchflow-smoke-62278292-39f-rabbitmq-1 Healthy 
+ Container batchflow-smoke-62278292-39f-worker-1 Healthy 

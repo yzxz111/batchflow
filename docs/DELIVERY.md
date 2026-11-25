@@ -57,7 +57,11 @@ node scripts/verify-compose.mjs
 
 该入口使用独立 Compose 项目和测试端口，构建镜像并验证真实 HTTP 导入、消息队列、Worker 恢复及数据不变量，再归档容器日志并清理本轮资源。具体结果以生成的 `report.json` 为准；缺少 Docker 时的环境受限报告不构成容器通过证据。
 
-`.github/workflows/ci.yml` 分别配置前后端校验和隔离 Compose 冒烟任务，保留原始测试报告及容器证据。配置文件存在、本地校验成功都不能代替 GitHub Actions 的实际运行。关联用户指定的仓库后，推送分支或手动触发工作流，并保留运行地址及下载的 artifacts。
+`.github/workflows/ci.yml` 分别配置前后端校验和隔离 Compose 冒烟任务，保留原始测试报告及容器证据。项目已关联私有仓库 [yzxz111/batchflow](https://github.com/yzxz111/batchflow)，[首次运行 45583013308](https://github.com/yzxz111/batchflow/actions/runs/45583013308)（attempt 1）于 **2026-11-25 17:11:18–17:16:09（北京时间，结束时间按 GitHub updatedAt）**成功完成；受测提交为 `4f908cab0ad9320d684ec15e136726aff8942987`。前端 87/87、后端 33/33，均零失败、零跳过，类型检查和构建通过；两个 job 均成功。
+
+Compose 原始报告运行于 **17:12:52–17:16:04（北京时间）**，Docker 29.4.2、Compose 5.1.3，9 项检查全部通过；包括 120 行混合导入、4×200 行任务、1200 行强停后从检查点 100 恢复，以及数据库不变量、Outbox/队列清空和隔离项目/卷/镜像清理。容器 RabbitMQ 使用 `4.1-management` 标签，与本机 4.4.1 验收分别记录。完整细节见 [实际验证记录](VERIFICATION.md#7-docker-与-github-actions-实机验收) 与 [Compose report.json](evidence/github-actions/45583013308/compose-smoke-evidence/2026-11-25T09-12-52-640Z-b282b646/report.json)。
+
+[远端证据目录](evidence/github-actions/45583013308/)保留 run/jobs/artifacts 元数据、两份原始 artifact ZIP、解包报告、汇总及 SHA-256 清单；原始 ZIP 校验和均与 GitHub 提供的 digest 一致。历史本机缺 Docker CLI 的 `BLOCKED` 报告保留，未改写成通过。本次为 GitHub 隔离环境验收，没有公网生产部署；后续文档与证据归档提交不改变应用源码，受测版本仍以以上 SHA 为准。
 
 ## 日常演示与数据
 

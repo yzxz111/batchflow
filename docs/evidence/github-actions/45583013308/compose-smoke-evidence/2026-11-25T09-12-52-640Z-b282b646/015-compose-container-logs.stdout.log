@@ -1,0 +1,368 @@
+worker-1    | 2026-11-25T09:15:14.442110944Z Picked up JAVA_TOOL_OPTIONS: -Xms128m -Xmx512m
+worker-1    | 2026-11-25T09:15:16.282703502Z 
+worker-1    | 2026-11-25T09:15:16.283668896Z   .   ____          _            __ _ _
+postgres-1  | 2026-11-25T09:14:57.640156211Z The files belonging to this database system will be owned by user "postgres".
+postgres-1  | 2026-11-25T09:14:57.640207978Z This user must also own the server process.
+postgres-1  | 2026-11-25T09:14:57.640212647Z 
+postgres-1  | 2026-11-25T09:14:57.640526988Z The database cluster will be initialized with locale "en_US.utf8".
+postgres-1  | 2026-11-25T09:14:57.640603111Z The default database encoding has accordingly been set to "UTF8".
+postgres-1  | 2026-11-25T09:14:57.640700544Z The default text search configuration will be set to "english".
+postgres-1  | 2026-11-25T09:14:57.640792166Z 
+postgres-1  | 2026-11-25T09:14:57.640852319Z Data page checksums are disabled.
+postgres-1  | 2026-11-25T09:14:57.640982283Z 
+postgres-1  | 2026-11-25T09:14:57.641302315Z fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres-1  | 2026-11-25T09:14:57.642362307Z creating subdirectories ... ok
+postgres-1  | 2026-11-25T09:14:57.642786694Z selecting dynamic shared memory implementation ... posix
+postgres-1  | 2026-11-25T09:14:57.665784001Z selecting default "max_connections" ... 100
+postgres-1  | 2026-11-25T09:14:57.702803377Z selecting default "shared_buffers" ... 128MB
+postgres-1  | 2026-11-25T09:14:57.776532207Z selecting default time zone ... UTC
+postgres-1  | 2026-11-25T09:14:57.777758832Z creating configuration files ... ok
+postgres-1  | 2026-11-25T09:14:57.990134236Z running bootstrap script ... ok
+postgres-1  | 2026-11-25T09:14:58.327185568Z sh: locale: not found
+postgres-1  | 2026-11-25T09:14:58.327426541Z 2026-11-25 09:14:58.327 UTC [34] WARNING:  no usable system locales were found
+postgres-1  | 2026-11-25T09:14:59.060752719Z performing post-bootstrap initialization ... ok
+postgres-1  | 2026-11-25T09:14:59.184058744Z syncing data to disk ... ok
+postgres-1  | 2026-11-25T09:14:59.184100612Z 
+postgres-1  | 2026-11-25T09:14:59.184104991Z 
+postgres-1  | 2026-11-25T09:14:59.184108146Z Success. You can now start the database server using:
+postgres-1  | 2026-11-25T09:14:59.184111162Z 
+postgres-1  | 2026-11-25T09:14:59.184113937Z     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres-1  | 2026-11-25T09:14:59.184116823Z 
+postgres-1  | 2026-11-25T09:14:59.184260222Z initdb: warning: enabling "trust" authentication for local connections
+postgres-1  | 2026-11-25T09:14:59.184266434Z initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres-1  | 2026-11-25T09:14:59.245880128Z waiting for server to start....2026-11-25 09:14:59.245 UTC [40] LOG:  starting PostgreSQL 17.12 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+postgres-1  | 2026-11-25T09:14:59.246679590Z 2026-11-25 09:14:59.246 UTC [40] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2026-11-25T09:14:59.250816444Z 2026-11-25 09:14:59.250 UTC [43] LOG:  database system was shut down at 2026-11-25 09:14:59 UTC
+postgres-1  | 2026-11-25T09:14:59.256712534Z 2026-11-25 09:14:59.256 UTC [40] LOG:  database system is ready to accept connections
+postgres-1  | 2026-11-25T09:14:59.317639928Z  done
+postgres-1  | 2026-11-25T09:14:59.317878025Z server started
+postgres-1  | 2026-11-25T09:14:59.425723497Z CREATE DATABASE
+postgres-1  | 2026-11-25T09:14:59.426994696Z 
+postgres-1  | 2026-11-25T09:14:59.427415507Z 
+postgres-1  | 2026-11-25T09:14:59.427722915Z /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+postgres-1  | 2026-11-25T09:14:59.427860974Z 
+postgres-1  | 2026-11-25T09:14:59.429460079Z 2026-11-25 09:14:59.429 UTC [40] LOG:  received fast shutdown request
+postgres-1  | 2026-11-25T09:14:59.430266344Z waiting for server to shut down....2026-11-25 09:14:59.430 UTC [40] LOG:  aborting any active transactions
+postgres-1  | 2026-11-25T09:14:59.439683390Z 2026-11-25 09:14:59.439 UTC [40] LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
+postgres-1  | 2026-11-25T09:14:59.440563825Z 2026-11-25 09:14:59.440 UTC [41] LOG:  shutting down
+postgres-1  | 2026-11-25T09:14:59.441410556Z 2026-11-25 09:14:59.440 UTC [41] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2026-11-25T09:14:59.465832596Z 2026-11-25 09:14:59.465 UTC [41] LOG:  checkpoint complete: wrote 935 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.021 s, sync=0.003 s, total=0.026 s; sync files=301, longest=0.001 s, average=0.001 s; distance=4339 kB, estimate=4339 kB; lsn=0/1942C28, redo lsn=0/1942C28
+postgres-1  | 2026-11-25T09:14:59.477012809Z 2026-11-25 09:14:59.476 UTC [40] LOG:  database system is shut down
+postgres-1  | 2026-11-25T09:14:59.530074693Z  done
+postgres-1  | 2026-11-25T09:14:59.530091304Z server stopped
+postgres-1  | 2026-11-25T09:14:59.531254910Z 
+postgres-1  | 2026-11-25T09:14:59.531266141Z PostgreSQL init process complete; ready for start up.
+postgres-1  | 2026-11-25T09:14:59.531270540Z 
+postgres-1  | 2026-11-25T09:14:59.563928751Z 2026-11-25 09:14:59.563 UTC [1] LOG:  starting PostgreSQL 17.12 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+postgres-1  | 2026-11-25T09:14:59.564131672Z 2026-11-25 09:14:59.564 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2026-11-25T09:14:59.564217042Z 2026-11-25 09:14:59.564 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2026-11-25T09:14:59.566851994Z 2026-11-25 09:14:59.566 UTC [1] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2026-11-25T09:14:59.572266515Z 2026-11-25 09:14:59.572 UTC [56] LOG:  database system was shut down at 2026-11-25 09:14:59 UTC
+postgres-1  | 2026-11-25T09:14:59.590165731Z 2026-11-25 09:14:59.590 UTC [1] LOG:  database system is ready to accept connections
+api-1       | 2026-11-25T09:15:03.764184215Z Picked up JAVA_TOOL_OPTIONS: -Xms128m -Xmx512m
+api-1       | 2026-11-25T09:15:05.197760588Z 
+api-1       | 2026-11-25T09:15:05.197815011Z   .   ____          _            __ _ _
+api-1       | 2026-11-25T09:15:05.197821042Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api-1       | 2026-11-25T09:15:05.197825039Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api-1       | 2026-11-25T09:15:05.197828656Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api-1       | 2026-11-25T09:15:05.197832043Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+api-1       | 2026-11-25T09:15:05.197835399Z  =========|_|==============|___/=/_/_/_/
+api-1       | 2026-11-25T09:15:05.197839286Z 
+api-1       | 2026-11-25T09:15:05.197842372Z  :: Spring Boot ::               (v3.5.16)
+api-1       | 2026-11-25T09:15:05.197845518Z 
+api-1       | 2026-11-25T09:15:05.339714068Z 2026-11-25T09:15:05.337Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : Starting BatchFlowApplication v0.1.0 using Java 21.0.13.1 with PID 1 (/app/batchflow.jar started by batchflow in /app)
+api-1       | 2026-11-25T09:15:05.342663352Z 2026-11-25T09:15:05.342Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : No active profile set, falling back to 1 default profile: "default"
+api-1       | 2026-11-25T09:15:07.374688687Z 2026-11-25T09:15:07.373Z  INFO 1 --- [batchflow] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 18090 (http)
+api-1       | 2026-11-25T09:15:07.395009481Z 2026-11-25T09:15:07.394Z  INFO 1 --- [batchflow] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+api-1       | 2026-11-25T09:15:07.395663590Z 2026-11-25T09:15:07.395Z  INFO 1 --- [batchflow] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+api-1       | 2026-11-25T09:15:07.426726906Z 2026-11-25T09:15:07.426Z  INFO 1 --- [batchflow] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+api-1       | 2026-11-25T09:15:07.428670429Z 2026-11-25T09:15:07.427Z  INFO 1 --- [batchflow] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1994 ms
+api-1       | 2026-11-25T09:15:07.818688832Z 2026-11-25T09:15:07.817Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+api-1       | 2026-11-25T09:15:08.138700083Z 2026-11-25T09:15:08.138Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@616a06e3
+api-1       | 2026-11-25T09:15:08.140683871Z 2026-11-25T09:15:08.140Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+api-1       | 2026-11-25T09:15:08.197357743Z 2026-11-25T09:15:08.196Z  INFO 1 --- [batchflow] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://postgres:5432/batchflow (PostgreSQL 17.12)
+api-1       | 2026-11-25T09:15:08.300708948Z 2026-11-25T09:15:08.297Z  INFO 1 --- [batchflow] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+api-1       | 2026-11-25T09:15:08.302319094Z 2026-11-25T09:15:08.302Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.060s)
+api-1       | 2026-11-25T09:15:08.343696476Z 2026-11-25T09:15:08.340Z  INFO 1 --- [batchflow] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+api-1       | 2026-11-25T09:15:08.483309547Z 2026-11-25T09:15:08.482Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+api-1       | 2026-11-25T09:15:08.540691259Z 2026-11-25T09:15:08.539Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - initial"
+api-1       | 2026-11-25T09:15:08.695348026Z 2026-11-25T09:15:08.694Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:00.105s)
+api-1       | 2026-11-25T09:15:09.622380105Z 2026-11-25T09:15:09.620Z  INFO 1 --- [batchflow] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+api-1       | 2026-11-25T09:15:09.957776123Z 2026-11-25T09:15:09.957Z  INFO 1 --- [batchflow] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 18090 (http) with context path '/'
+api-1       | 2026-11-25T09:15:09.976714245Z 2026-11-25T09:15:09.976Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : Started BatchFlowApplication in 5.449 seconds (process running for 6.212)
+api-1       | 2026-11-25T09:15:14.037593414Z 2026-11-25T09:15:14.037Z  INFO 1 --- [batchflow] [.0-18090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+api-1       | 2026-11-25T09:15:14.037649680Z 2026-11-25T09:15:14.037Z  INFO 1 --- [batchflow] [.0-18090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+api-1       | 2026-11-25T09:15:14.039071411Z 2026-11-25T09:15:14.038Z  INFO 1 --- [batchflow] [.0-18090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+api-1       | 2026-11-25T09:15:26.051734781Z 2026-11-25T09:15:26.049Z  INFO 1 --- [batchflow] [   scheduling-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+api-1       | 2026-11-25T09:15:26.103453598Z 2026-11-25T09:15:26.103Z  INFO 1 --- [batchflow] [   scheduling-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2bb31455:0/SimpleConnection@5ee53708 [delegate=amqp://batchflow@172.18.0.2:5672/, localPort=48210]
+worker-1    | 2026-11-25T09:15:16.283681790Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+worker-1    | 2026-11-25T09:15:16.283686309Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+worker-1    | 2026-11-25T09:15:16.283690065Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+worker-1    | 2026-11-25T09:15:16.283693652Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+worker-1    | 2026-11-25T09:15:16.283697259Z  =========|_|==============|___/=/_/_/_/
+worker-1    | 2026-11-25T09:15:16.283700385Z 
+worker-1    | 2026-11-25T09:15:16.283709713Z  :: Spring Boot ::               (v3.5.16)
+worker-1    | 2026-11-25T09:15:16.284827253Z 
+worker-1    | 2026-11-25T09:15:16.446926122Z 2026-11-25T09:15:16.443Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : Starting BatchFlowApplication v0.1.0 using Java 21.0.13.1 with PID 1 (/app/batchflow.jar started by batchflow in /app)
+worker-1    | 2026-11-25T09:15:16.451845166Z 2026-11-25T09:15:16.449Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : No active profile set, falling back to 1 default profile: "default"
+worker-1    | 2026-11-25T09:15:18.421527877Z 2026-11-25T09:15:18.421Z  INFO 1 --- [batchflow] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 18091 (http)
+worker-1    | 2026-11-25T09:15:18.438089519Z 2026-11-25T09:15:18.437Z  INFO 1 --- [batchflow] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+worker-1    | 2026-11-25T09:15:18.438474251Z 2026-11-25T09:15:18.438Z  INFO 1 --- [batchflow] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+worker-1    | 2026-11-25T09:15:18.468066139Z 2026-11-25T09:15:18.467Z  INFO 1 --- [batchflow] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+worker-1    | 2026-11-25T09:15:18.469756325Z 2026-11-25T09:15:18.469Z  INFO 1 --- [batchflow] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1908 ms
+worker-1    | 2026-11-25T09:15:18.792979305Z 2026-11-25T09:15:18.791Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+worker-1    | 2026-11-25T09:15:19.098760750Z 2026-11-25T09:15:19.098Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c48b72c
+worker-1    | 2026-11-25T09:15:19.100971705Z 2026-11-25T09:15:19.100Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+worker-1    | 2026-11-25T09:15:19.144789044Z 2026-11-25T09:15:19.143Z  INFO 1 --- [batchflow] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://postgres:5432/batchflow (PostgreSQL 17.12)
+worker-1    | 2026-11-25T09:15:19.232381031Z 2026-11-25T09:15:19.231Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.056s)
+worker-1    | 2026-11-25T09:15:19.291741247Z 2026-11-25T09:15:19.291Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+worker-1    | 2026-11-25T09:15:19.294710146Z 2026-11-25T09:15:19.294Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+worker-1    | 2026-11-25T09:15:19.724763849Z 2026-11-25T09:15:19.723Z  INFO 1 --- [batchflow] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+worker-1    | 2026-11-25T09:15:20.409538955Z 2026-11-25T09:15:20.409Z  INFO 1 --- [batchflow] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 18091 (http) with context path '/'
+worker-1    | 2026-11-25T09:15:20.416262559Z 2026-11-25T09:15:20.416Z  INFO 1 --- [batchflow] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+worker-1    | 2026-11-25T09:15:20.523844410Z 2026-11-25T09:15:20.522Z  INFO 1 --- [batchflow] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#77cddc0c:0/SimpleConnection@1c18ee69 [delegate=amqp://batchflow@172.18.0.2:5672/, localPort=39608]
+worker-1    | 2026-11-25T09:15:20.696606214Z 2026-11-25T09:15:20.693Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : Started BatchFlowApplication in 5.065 seconds (process running for 6.251)
+worker-1    | 2026-11-25T09:15:24.691771361Z 2026-11-25T09:15:24.690Z  INFO 1 --- [batchflow] [.0-18091-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+worker-1    | 2026-11-25T09:15:24.691800235Z 2026-11-25T09:15:24.691Z  INFO 1 --- [batchflow] [.0-18091-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+worker-1    | 2026-11-25T09:15:24.692889752Z 2026-11-25T09:15:24.692Z  INFO 1 --- [batchflow] [.0-18091-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+worker-1    | 2026-11-25T09:15:43.904688048Z Picked up JAVA_TOOL_OPTIONS: -Xms128m -Xmx512m
+worker-1    | 2026-11-25T09:15:45.553197890Z 
+worker-1    | 2026-11-25T09:15:45.553274805Z   .   ____          _            __ _ _
+worker-1    | 2026-11-25T09:15:45.553285054Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+worker-1    | 2026-11-25T09:15:45.553291436Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+worker-1    | 2026-11-25T09:15:45.553296726Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+worker-1    | 2026-11-25T09:15:45.553302186Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+worker-1    | 2026-11-25T09:15:45.553307687Z  =========|_|==============|___/=/_/_/_/
+worker-1    | 2026-11-25T09:15:45.553313047Z 
+worker-1    | 2026-11-25T09:15:45.553654588Z  :: Spring Boot ::               (v3.5.16)
+worker-1    | 2026-11-25T09:15:45.553667252Z 
+worker-1    | 2026-11-25T09:15:45.710843948Z 2026-11-25T09:15:45.705Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : Starting BatchFlowApplication v0.1.0 using Java 21.0.13.1 with PID 1 (/app/batchflow.jar started by batchflow in /app)
+worker-1    | 2026-11-25T09:15:45.712707754Z 2026-11-25T09:15:45.711Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : No active profile set, falling back to 1 default profile: "default"
+worker-1    | 2026-11-25T09:15:48.477600882Z 2026-11-25T09:15:48.477Z  INFO 1 --- [batchflow] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 18091 (http)
+worker-1    | 2026-11-25T09:15:48.496382525Z 2026-11-25T09:15:48.496Z  INFO 1 --- [batchflow] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+worker-1    | 2026-11-25T09:15:48.496846647Z 2026-11-25T09:15:48.496Z  INFO 1 --- [batchflow] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+worker-1    | 2026-11-25T09:15:48.560732908Z 2026-11-25T09:15:48.559Z  INFO 1 --- [batchflow] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+worker-1    | 2026-11-25T09:15:48.561716387Z 2026-11-25T09:15:48.561Z  INFO 1 --- [batchflow] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2683 ms
+worker-1    | 2026-11-25T09:15:48.991690756Z 2026-11-25T09:15:48.990Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+worker-1    | 2026-11-25T09:15:49.642473822Z 2026-11-25T09:15:49.642Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c48b72c
+worker-1    | 2026-11-25T09:15:49.648896181Z 2026-11-25T09:15:49.648Z  INFO 1 --- [batchflow] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+worker-1    | 2026-11-25T09:15:49.740575328Z 2026-11-25T09:15:49.739Z  INFO 1 --- [batchflow] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://postgres:5432/batchflow (PostgreSQL 17.12)
+worker-1    | 2026-11-25T09:15:49.913683963Z 2026-11-25T09:15:49.913Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.081s)
+worker-1    | 2026-11-25T09:15:49.957696668Z 2026-11-25T09:15:49.957Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+worker-1    | 2026-11-25T09:15:49.968660481Z 2026-11-25T09:15:49.962Z  INFO 1 --- [batchflow] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+worker-1    | 2026-11-25T09:15:50.571425127Z 2026-11-25T09:15:50.571Z  INFO 1 --- [batchflow] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+worker-1    | 2026-11-25T09:15:51.212412869Z 2026-11-25T09:15:51.212Z  INFO 1 --- [batchflow] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 18091 (http) with context path '/'
+worker-1    | 2026-11-25T09:15:51.217561904Z 2026-11-25T09:15:51.217Z  INFO 1 --- [batchflow] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+worker-1    | 2026-11-25T09:15:51.273734751Z 2026-11-25T09:15:51.273Z  INFO 1 --- [batchflow] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2e3252:0/SimpleConnection@5c1c9881 [delegate=amqp://batchflow@172.18.0.2:5672/, localPort=49362]
+worker-1    | 2026-11-25T09:15:51.383691484Z 2026-11-25T09:15:51.382Z  INFO 1 --- [batchflow] [           main] com.batchflow.BatchFlowApplication       : Started BatchFlowApplication in 6.566 seconds (process running for 7.478)
+worker-1    | 2026-11-25T09:15:54.126078961Z 2026-11-25T09:15:54.125Z  INFO 1 --- [batchflow] [.0-18091-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+worker-1    | 2026-11-25T09:15:54.127647639Z 2026-11-25T09:15:54.126Z  INFO 1 --- [batchflow] [.0-18091-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+worker-1    | 2026-11-25T09:15:54.129665761Z 2026-11-25T09:15:54.129Z  INFO 1 --- [batchflow] [.0-18091-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+rabbitmq-1  | 2026-11-25T09:15:00.502752607Z 2026-11-25 09:15:00.497686+00:00 [notice] <0.45.0> Application syslog exited with reason: stopped
+rabbitmq-1  | 2026-11-25T09:15:00.502799044Z 2026-11-25 09:15:00.502129+00:00 [notice] <0.209.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+rabbitmq-1  | 2026-11-25T09:15:00.502946702Z [38;5;87m2026-11-25 09:15:00.502734+00:00 [notice] <0.209.0> Logging: configured log handlers are now ACTIVE[0m
+rabbitmq-1  | 2026-11-25T09:15:00.509297923Z 2026-11-25 09:15:00.509078+00:00 [info] <0.209.0> ra: starting system coordination[0m
+rabbitmq-1  | 2026-11-25T09:15:00.509426134Z 2026-11-25 09:15:00.509150+00:00 [info] <0.209.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@2d243050c844/coordination/rabbit@2d243050c844[0m
+rabbitmq-1  | 2026-11-25T09:15:00.515467641Z 2026-11-25 09:15:00.515262+00:00 [info] <0.216.0> ra_coordination_log_ets: in system coordination initialising. Mem table opts: [set,{write_concurrency,auto},public,{compressed,false}][0m
+rabbitmq-1  | 2026-11-25T09:15:00.552969905Z 2026-11-25 09:15:00.552726+00:00 [info] <0.222.0> ra system 'coordination' running pre init for 0 registered servers[0m
+rabbitmq-1  | 2026-11-25T09:15:00.560418963Z 2026-11-25 09:15:00.560226+00:00 [info] <0.223.0> ra: meta data store initialised for system coordination. 0 record(s) recovered[0m
+rabbitmq-1  | 2026-11-25T09:15:00.564461546Z 2026-11-25 09:15:00.564138+00:00 [info] <0.226.0> segment_writer: upgrading segment file names to new format in dirctory /var/lib/rabbitmq/mnesia/rabbit@2d243050c844/coordination/rabbit@2d243050c844[0m
+rabbitmq-1  | 2026-11-25T09:15:00.574125096Z [38;5;87m2026-11-25 09:15:00.573863+00:00 [notice] <0.228.0> WAL: ra_coordination_log_wal init, mem-tables table name: ra_coordination_log_open_mem_tables[0m
+rabbitmq-1  | 2026-11-25T09:15:00.581490400Z 2026-11-25 09:15:00.581201+00:00 [info] <0.209.0> ra: starting system quorum_queues[0m
+rabbitmq-1  | 2026-11-25T09:15:00.581503805Z 2026-11-25 09:15:00.581241+00:00 [info] <0.209.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@2d243050c844/quorum/rabbit@2d243050c844[0m
+rabbitmq-1  | 2026-11-25T09:15:00.582001601Z 2026-11-25 09:15:00.581802+00:00 [info] <0.232.0> ra_log_ets: in system quorum_queues initialising. Mem table opts: [set,{write_concurrency,auto},public,{compressed,true}][0m
+rabbitmq-1  | 2026-11-25T09:15:00.582718047Z 2026-11-25 09:15:00.582479+00:00 [info] <0.236.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+rabbitmq-1  | 2026-11-25T09:15:00.583390801Z 2026-11-25 09:15:00.583197+00:00 [info] <0.237.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+rabbitmq-1  | 2026-11-25T09:15:00.583664055Z 2026-11-25 09:15:00.583345+00:00 [info] <0.240.0> segment_writer: upgrading segment file names to new format in dirctory /var/lib/rabbitmq/mnesia/rabbit@2d243050c844/quorum/rabbit@2d243050c844[0m
+rabbitmq-1  | 2026-11-25T09:15:00.584196405Z [38;5;87m2026-11-25 09:15:00.583977+00:00 [notice] <0.242.0> WAL: ra_log_wal init, mem-tables table name: ra_log_open_mem_tables[0m
+rabbitmq-1  | 2026-11-25T09:15:00.585275483Z 2026-11-25 09:15:00.585023+00:00 [info] <0.244.0> ra_system_recover: ra system 'quorum_queues' server recovery strategy rabbit_quorum_queue:system_recover[0m
+rabbitmq-1  | 2026-11-25T09:15:00.585565024Z 2026-11-25 09:15:00.585118+00:00 [info] <0.244.0> [rabbit_quorum_queue:system_recover/1] rabbit not booted, skipping queue recovery[0m
+rabbitmq-1  | 2026-11-25T09:15:00.585633132Z 2026-11-25 09:15:00.585286+00:00 [info] <0.209.0> ra: starting system coordination[0m
+rabbitmq-1  | 2026-11-25T09:15:00.585799277Z 2026-11-25 09:15:00.585347+00:00 [info] <0.209.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@2d243050c844/coordination/rabbit@2d243050c844[0m
+rabbitmq-1  | 2026-11-25T09:15:00.660273438Z [38;5;87m2026-11-25 09:15:00.659839+00:00 [notice] <0.246.0> RabbitMQ metadata store: candidate -> leader in term: 1 machine version: 1, last applied 0[0m
+rabbitmq-1  | 2026-11-25T09:15:00.781841197Z 2026-11-25 09:15:00.781545+00:00 [info] <0.209.0> [0m
+rabbitmq-1  | 2026-11-25T09:15:00.781863879Z 2026-11-25 09:15:00.781545+00:00 [info] <0.209.0>  Starting RabbitMQ 4.1.8 on Erlang 27.3.4.20 [jit][0m
+rabbitmq-1  | 2026-11-25T09:15:00.781868819Z 2026-11-25 09:15:00.781545+00:00 [info] <0.209.0>  Copyright (c) 2007-2026 Broadcom Inc and/or its subsidiaries[0m
+rabbitmq-1  | 2026-11-25T09:15:00.781873197Z 2026-11-25 09:15:00.781545+00:00 [info] <0.209.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+rabbitmq-1  | 2026-11-25T09:15:00.782465099Z 
+rabbitmq-1  | 2026-11-25T09:15:00.782472984Z   ##  ##      RabbitMQ 4.1.8
+rabbitmq-1  | 2026-11-25T09:15:00.782476711Z   ##  ##
+rabbitmq-1  | 2026-11-25T09:15:00.782480328Z   ##########  Copyright (c) 2007-2026 Broadcom Inc and/or its subsidiaries
+rabbitmq-1  | 2026-11-25T09:15:00.782483904Z   ######  ##
+rabbitmq-1  | 2026-11-25T09:15:00.782487070Z   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+rabbitmq-1  | 2026-11-25T09:15:00.782529831Z 
+rabbitmq-1  | 2026-11-25T09:15:00.782533197Z   Erlang:      27.3.4.20 [jit]
+rabbitmq-1  | 2026-11-25T09:15:00.782536563Z   TLS Library: OpenSSL - OpenSSL 3.5.9 29 Sep 2026
+rabbitmq-1  | 2026-11-25T09:15:00.782539839Z   Release series support status: see https://www.rabbitmq.com/release-information
+rabbitmq-1  | 2026-11-25T09:15:00.782543436Z 
+rabbitmq-1  | 2026-11-25T09:15:00.782547304Z   Doc guides:  https://www.rabbitmq.com/docs
+rabbitmq-1  | 2026-11-25T09:15:00.782550519Z   Support:     https://www.rabbitmq.com/docs/contact
+rabbitmq-1  | 2026-11-25T09:15:00.782553505Z   Tutorials:   https://www.rabbitmq.com/tutorials
+rabbitmq-1  | 2026-11-25T09:15:00.782556811Z   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+rabbitmq-1  | 2026-11-25T09:15:00.782559897Z   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+rabbitmq-1  | 2026-11-25T09:15:00.782562883Z 
+rabbitmq-1  | 2026-11-25T09:15:00.782565888Z   Logs: <stdout>
+rabbitmq-1  | 2026-11-25T09:15:00.782569114Z 
+rabbitmq-1  | 2026-11-25T09:15:00.782571960Z   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+rabbitmq-1  | 2026-11-25T09:15:00.782575316Z 
+rabbitmq-1  | 2026-11-25T09:15:00.782883505Z   Starting broker...2026-11-25 09:15:00.782679+00:00 [info] <0.209.0> [0m
+rabbitmq-1  | 2026-11-25T09:15:00.782895237Z 2026-11-25 09:15:00.782679+00:00 [info] <0.209.0>  node           : rabbit@2d243050c844[0m
+rabbitmq-1  | 2026-11-25T09:15:00.782908943Z 2026-11-25 09:15:00.782679+00:00 [info] <0.209.0>  home dir       : /var/lib/rabbitmq[0m
+rabbitmq-1  | 2026-11-25T09:15:00.782913081Z 2026-11-25 09:15:00.782679+00:00 [info] <0.209.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+rabbitmq-1  | 2026-11-25T09:15:00.782916778Z 2026-11-25 09:15:00.782679+00:00 [info] <0.209.0>  cookie hash    : uu7jGvEEmAwmp6ktozGYKQ==[0m
+rabbitmq-1  | 2026-11-25T09:15:00.782920485Z 2026-11-25 09:15:00.782679+00:00 [info] <0.209.0>  log(s)         : <stdout>[0m
+rabbitmq-1  | 2026-11-25T09:15:00.782924162Z 2026-11-25 09:15:00.782679+00:00 [info] <0.209.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@2d243050c844[0m
+rabbitmq-1  | 2026-11-25T09:15:01.008754690Z 2026-11-25 09:15:01.008023+00:00 [info] <0.209.0> Running boot step pre_boot defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.009054052Z 2026-11-25 09:15:01.008078+00:00 [info] <0.209.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.009062608Z 2026-11-25 09:15:01.008313+00:00 [info] <0.209.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.009137860Z 2026-11-25 09:15:01.008399+00:00 [info] <0.209.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.009442993Z 2026-11-25 09:15:01.009242+00:00 [info] <0.209.0> Running boot step rabbit_alarm defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.019067185Z 2026-11-25 09:15:01.018910+00:00 [info] <0.276.0> Memory high watermark set to 4759 MiB (4990213324 bytes) of 7931 MiB (8317022208 bytes) total[0m
+rabbitmq-1  | 2026-11-25T09:15:01.022114135Z 2026-11-25 09:15:01.021892+00:00 [info] <0.278.0> Enabling free disk space monitoring (disk free space: 12360650752, total memory: 8317022208)[0m
+rabbitmq-1  | 2026-11-25T09:15:01.022297068Z 2026-11-25 09:15:01.021950+00:00 [info] <0.278.0> Disk free limit set to 50MB[0m
+rabbitmq-1  | 2026-11-25T09:15:01.023967834Z 2026-11-25 09:15:01.023769+00:00 [info] <0.209.0> Running boot step code_server_cache defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.024097041Z 2026-11-25 09:15:01.023838+00:00 [info] <0.209.0> Running boot step file_handle_cache defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.030653682Z 2026-11-25 09:15:01.030373+00:00 [info] <0.281.0> Limiting to approx 65439 file handles (58893 sockets)[0m
+rabbitmq-1  | 2026-11-25T09:15:01.030858748Z 2026-11-25 09:15:01.030507+00:00 [info] <0.282.0> FHC read buffering: OFF[0m
+rabbitmq-1  | 2026-11-25T09:15:01.030962462Z 2026-11-25 09:15:01.030560+00:00 [info] <0.282.0> FHC write buffering: ON[0m
+rabbitmq-1  | 2026-11-25T09:15:01.031310226Z 2026-11-25 09:15:01.031063+00:00 [info] <0.209.0> Running boot step worker_pool defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.031599289Z 2026-11-25 09:15:01.031175+00:00 [info] <0.263.0> Will use 2 processes for default worker pool[0m
+rabbitmq-1  | 2026-11-25T09:15:01.031858887Z 2026-11-25 09:15:01.031230+00:00 [info] <0.263.0> Starting worker pool 'worker_pool' with 2 processes in it[0m
+rabbitmq-1  | 2026-11-25T09:15:01.032169932Z 2026-11-25 09:15:01.031543+00:00 [info] <0.209.0> Running boot step rabbit_registry defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.032306328Z 2026-11-25 09:15:01.031654+00:00 [info] <0.209.0> Running boot step database defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.032443606Z 2026-11-25 09:15:01.031985+00:00 [info] <0.209.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+rabbitmq-1  | 2026-11-25T09:15:01.033487117Z [38;5;87m2026-11-25 09:15:01.033093+00:00 [notice] <0.264.0> Feature flags: attempt to enable `rabbit_exchange_type_local_random`...[0m
+rabbitmq-1  | 2026-11-25T09:15:01.041608338Z [38;5;87m2026-11-25 09:15:01.041065+00:00 [notice] <0.264.0> Feature flags: `rabbit_exchange_type_local_random` enabled[0m
+rabbitmq-1  | 2026-11-25T09:15:01.043174561Z [38;5;87m2026-11-25 09:15:01.041127+00:00 [notice] <0.264.0> Feature flags: attempt to enable `detailed_queues_endpoint`...[0m
+rabbitmq-1  | 2026-11-25T09:15:01.050753543Z [38;5;87m2026-11-25 09:15:01.048785+00:00 [notice] <0.264.0> Feature flags: `detailed_queues_endpoint` enabled[0m
+rabbitmq-1  | 2026-11-25T09:15:01.051908023Z [38;5;87m2026-11-25 09:15:01.048842+00:00 [notice] <0.264.0> Feature flags: attempt to enable `quorum_queue_non_voters`...[0m
+rabbitmq-1  | 2026-11-25T09:15:01.058693103Z [38;5;87m2026-11-25 09:15:01.056584+00:00 [notice] <0.264.0> Feature flags: `quorum_queue_non_voters` enabled[0m
+rabbitmq-1  | 2026-11-25T09:15:01.059741413Z [38;5;87m2026-11-25 09:15:01.056680+00:00 [notice] <0.264.0> Feature flags: attempt to enable `rabbitmq_4.1.0`...[0m
+rabbitmq-1  | 2026-11-25T09:15:01.062819167Z [38;5;87m2026-11-25 09:15:01.060271+00:00 [notice] <0.264.0> Feature flags: attempt to enable `rabbitmq_4.0.0`...[0m
+rabbitmq-1  | 2026-11-25T09:15:01.068984503Z [38;5;87m2026-11-25 09:15:01.068604+00:00 [notice] <0.264.0> Feature flags: `rabbitmq_4.0.0` enabled[0m
+rabbitmq-1  | 2026-11-25T09:15:01.074354394Z [38;5;87m2026-11-25 09:15:01.073827+00:00 [notice] <0.264.0> Feature flags: `rabbitmq_4.1.0` enabled[0m
+rabbitmq-1  | 2026-11-25T09:15:01.075506128Z [38;5;87m2026-11-25 09:15:01.073881+00:00 [notice] <0.264.0> Feature flags: attempt to enable `message_containers_deaths_v2`...[0m
+rabbitmq-1  | 2026-11-25T09:15:01.083315113Z [38;5;87m2026-11-25 09:15:01.082368+00:00 [notice] <0.264.0> Feature flags: `message_containers_deaths_v2` enabled[0m
+rabbitmq-1  | 2026-11-25T09:15:01.083394753Z 2026-11-25 09:15:01.082719+00:00 [info] <0.209.0> DB: virgin node -> run peer discovery[0m
+rabbitmq-1  | 2026-11-25T09:15:01.083486695Z [38;5;214m2026-11-25 09:15:01.082800+00:00 [warning] <0.209.0> Classic peer discovery backend: list of nodes does not contain the local node [][0m
+rabbitmq-1  | 2026-11-25T09:15:01.092811819Z [38;5;87m2026-11-25 09:15:01.092579+00:00 [notice] <0.45.0> Application mnesia exited with reason: stopped[0m
+rabbitmq-1  | 2026-11-25T09:15:01.190955399Z 2026-11-25 09:15:01.190708+00:00 [info] <0.209.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq-1  | 2026-11-25T09:15:01.191230205Z 2026-11-25 09:15:01.190823+00:00 [info] <0.209.0> Successfully synced tables from a peer[0m
+rabbitmq-1  | 2026-11-25T09:15:01.191246937Z 2026-11-25 09:15:01.191055+00:00 [info] <0.209.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq-1  | 2026-11-25T09:15:01.191462502Z 2026-11-25 09:15:01.191278+00:00 [info] <0.209.0> Successfully synced tables from a peer[0m
+rabbitmq-1  | 2026-11-25T09:15:01.193968381Z 2026-11-25 09:15:01.193425+00:00 [info] <0.209.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq-1  | 2026-11-25T09:15:01.194000942Z 2026-11-25 09:15:01.193547+00:00 [info] <0.209.0> Successfully synced tables from a peer[0m
+rabbitmq-1  | 2026-11-25T09:15:01.194367140Z 2026-11-25 09:15:01.193699+00:00 [info] <0.209.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.194372561Z 2026-11-25 09:15:01.193786+00:00 [info] <0.477.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+rabbitmq-1  | 2026-11-25T09:15:01.194376658Z 2026-11-25 09:15:01.193859+00:00 [info] <0.477.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+rabbitmq-1  | 2026-11-25T09:15:01.194380516Z 2026-11-25 09:15:01.194050+00:00 [info] <0.477.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+rabbitmq-1  | 2026-11-25T09:15:01.194553481Z 2026-11-25 09:15:01.194141+00:00 [info] <0.477.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+rabbitmq-1  | 2026-11-25T09:15:01.194755280Z 2026-11-25 09:15:01.194204+00:00 [info] <0.477.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+rabbitmq-1  | 2026-11-25T09:15:01.195554362Z 2026-11-25 09:15:01.194299+00:00 [info] <0.209.0> Running boot step networking_metadata_store defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.195666913Z 2026-11-25 09:15:01.194469+00:00 [info] <0.209.0> Running boot step feature_flags defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.195718951Z 2026-11-25 09:15:01.194725+00:00 [info] <0.209.0> Running boot step auth_backend_plugins_check defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.195949324Z 2026-11-25 09:15:01.194785+00:00 [info] <0.209.0> Running boot step codec_correctness_check defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196123000Z 2026-11-25 09:15:01.194842+00:00 [info] <0.209.0> Running boot step external_infrastructure defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196208631Z 2026-11-25 09:15:01.194883+00:00 [info] <0.209.0> Running boot step rabbit_event defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196279153Z 2026-11-25 09:15:01.194980+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196477065Z 2026-11-25 09:15:01.195049+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_anonymous defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196603343Z 2026-11-25 09:15:01.195088+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196726594Z 2026-11-25 09:15:01.195126+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196863842Z 2026-11-25 09:15:01.195160+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196870996Z 2026-11-25 09:15:01.195195+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.196891364Z 2026-11-25 09:15:01.195229+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.197006200Z 2026-11-25 09:15:01.195262+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_local_random defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.197013754Z 2026-11-25 09:15:01.195303+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.197121116Z 2026-11-25 09:15:01.195336+00:00 [info] <0.209.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.197339466Z 2026-11-25 09:15:01.195421+00:00 [info] <0.209.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+rabbitmq-1  | 2026-11-25T09:15:01.197475432Z 2026-11-25 09:15:01.195501+00:00 [info] <0.209.0> Running boot step kernel_ready defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.197502693Z 2026-11-25 09:15:01.195698+00:00 [info] <0.209.0> Running boot step pg_local_amqp_connection defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.202196784Z 2026-11-25 09:15:01.201929+00:00 [info] <0.209.0> Running boot step pg_local_amqp_session defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.202438174Z 2026-11-25 09:15:01.202059+00:00 [info] <0.209.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.202605899Z 2026-11-25 09:15:01.202190+00:00 [info] <0.209.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.203363272Z 2026-11-25 09:15:01.203173+00:00 [info] <0.486.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+rabbitmq-1  | 2026-11-25T09:15:01.203551576Z 2026-11-25 09:15:01.203275+00:00 [info] <0.209.0> Running boot step guid_generator defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.204678083Z 2026-11-25 09:15:01.204162+00:00 [info] <0.209.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.205230962Z 2026-11-25 09:15:01.204379+00:00 [info] <0.490.0> Starting rabbit_node_monitor (in ignore mode)[0m
+rabbitmq-1  | 2026-11-25T09:15:01.205425207Z 2026-11-25 09:15:01.204488+00:00 [info] <0.209.0> Running boot step delegate_sup defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.205595006Z 2026-11-25 09:15:01.205202+00:00 [info] <0.209.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.205849558Z 2026-11-25 09:15:01.205297+00:00 [info] <0.209.0> Running boot step core_initialized defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.205988606Z 2026-11-25 09:15:01.205350+00:00 [info] <0.209.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.206134780Z 2026-11-25 09:15:01.205428+00:00 [info] <0.209.0> Running boot step rabbit_classic_queue defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.206312979Z 2026-11-25 09:15:01.205517+00:00 [info] <0.209.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.206485149Z 2026-11-25 09:15:01.205582+00:00 [info] <0.209.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.206492893Z 2026-11-25 09:15:01.205674+00:00 [info] <0.209.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.351890116Z 2026-11-25 09:15:01.351610+00:00 [info] <0.209.0> Running boot step rabbit_policies defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.352544676Z 2026-11-25 09:15:01.352096+00:00 [info] <0.209.0> Running boot step rabbit_policy defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.352553101Z 2026-11-25 09:15:01.352162+00:00 [info] <0.209.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.352675151Z 2026-11-25 09:15:01.352224+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.352854177Z 2026-11-25 09:15:01.352365+00:00 [info] <0.209.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.353047791Z 2026-11-25 09:15:01.352815+00:00 [info] <0.209.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.353254410Z 2026-11-25 09:15:01.352901+00:00 [info] <0.209.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+rabbitmq-1  | 2026-11-25T09:15:01.353413398Z 2026-11-25 09:15:01.352967+00:00 [info] <0.209.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+rabbitmq-1  | 2026-11-25T09:15:01.353697622Z 2026-11-25 09:15:01.353043+00:00 [info] <0.209.0> Management plugin: using rates mode 'basic'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.353885516Z 2026-11-25 09:15:01.353261+00:00 [info] <0.209.0> Running boot step recovery defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.364814002Z 2026-11-25 09:15:01.364562+00:00 [info] <0.209.0> Running boot step prevent_startup_if_node_was_reset defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.365152695Z 2026-11-25 09:15:01.364612+00:00 [info] <0.209.0> Running boot step empty_db_check defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.365232989Z 2026-11-25 09:15:01.364712+00:00 [info] <0.209.0> Will seed default virtual host and user...[0m
+rabbitmq-1  | 2026-11-25T09:15:01.365360946Z 2026-11-25 09:15:01.364864+00:00 [info] <0.209.0> Adding vhost '/' (description: 'Default virtual host', tags: [])[0m
+rabbitmq-1  | 2026-11-25T09:15:01.369951286Z 2026-11-25 09:15:01.369770+00:00 [info] <0.533.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@2d243050c844/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+rabbitmq-1  | 2026-11-25T09:15:01.370922030Z 2026-11-25 09:15:01.370738+00:00 [info] <0.533.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.378900313Z 2026-11-25 09:15:01.378745+00:00 [info] <0.533.0> Starting message stores for vhost '/'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.380194445Z 2026-11-25 09:15:01.379964+00:00 [info] <0.533.0> Started message store of type transient for vhost '/'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.380691679Z [38;5;214m2026-11-25 09:15:01.380526+00:00 [warning] <0.547.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch[0m
+rabbitmq-1  | 2026-11-25T09:15:01.381498802Z 2026-11-25 09:15:01.381290+00:00 [info] <0.533.0> Started message store of type persistent for vhost '/'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.381668601Z 2026-11-25 09:15:01.381483+00:00 [info] <0.533.0> Recovering 0 queues of type rabbit_classic_queue took 10ms[0m
+rabbitmq-1  | 2026-11-25T09:15:01.381865174Z 2026-11-25 09:15:01.381560+00:00 [info] <0.533.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+rabbitmq-1  | 2026-11-25T09:15:01.381933700Z 2026-11-25 09:15:01.381704+00:00 [info] <0.533.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+rabbitmq-1  | 2026-11-25T09:15:01.383574202Z 2026-11-25 09:15:01.383313+00:00 [info] <0.209.0> Created user 'batchflow'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.384115399Z 2026-11-25 09:15:01.383881+00:00 [info] <0.209.0> Successfully set user tags for user 'batchflow' to [administrator][0m
+rabbitmq-1  | 2026-11-25T09:15:01.384736878Z 2026-11-25 09:15:01.384570+00:00 [info] <0.209.0> Successfully set permissions for user 'batchflow' in virtual host '/' to '.*', '.*', '.*'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.384958574Z 2026-11-25 09:15:01.384647+00:00 [info] <0.209.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.385133683Z 2026-11-25 09:15:01.384777+00:00 [info] <0.209.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.385354158Z 2026-11-25 09:15:01.385024+00:00 [info] <0.209.0> Running boot step background_gc defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.385522494Z 2026-11-25 09:15:01.385247+00:00 [info] <0.209.0> Running boot step routing_ready defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.385783765Z 2026-11-25 09:15:01.385309+00:00 [info] <0.209.0> Running boot step pre_flight defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.385927485Z 2026-11-25 09:15:01.385400+00:00 [info] <0.209.0> Running boot step notify_cluster defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.386069351Z 2026-11-25 09:15:01.385504+00:00 [info] <0.209.0> Running boot step networking defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.386306507Z 2026-11-25 09:15:01.385697+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.386488389Z 2026-11-25 09:15:01.385939+00:00 [info] <0.209.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.386824340Z 2026-11-25 09:15:01.386049+00:00 [info] <0.263.0> Starting worker pool 'definition_import_pool' with 2 processes in it[0m
+rabbitmq-1  | 2026-11-25T09:15:01.387089799Z 2026-11-25 09:15:01.386317+00:00 [info] <0.209.0> Running boot step cluster_name defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.387762817Z 2026-11-25 09:15:01.386461+00:00 [info] <0.209.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-EAsxzBJn6nYYnPdcHxyUYQ'[0m
+rabbitmq-1  | 2026-11-25T09:15:01.388347115Z 2026-11-25 09:15:01.387867+00:00 [info] <0.209.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.388547482Z 2026-11-25 09:15:01.388035+00:00 [info] <0.209.0> Running boot step direct_client defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.388664372Z 2026-11-25 09:15:01.388117+00:00 [info] <0.209.0> Running boot step cluster_tags defined by app rabbit[0m
+rabbitmq-1  | 2026-11-25T09:15:01.389457462Z 2026-11-25 09:15:01.388971+00:00 [info] <0.209.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+rabbitmq-1  | 2026-11-25T09:15:01.389524638Z 2026-11-25 09:15:01.389093+00:00 [info] <0.583.0> Resetting node maintenance status[0m
+rabbitmq-1  | 2026-11-25T09:15:01.512500679Z [38;5;214m2026-11-25 09:15:01.512085+00:00 [warning] <0.605.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+rabbitmq-1  | 2026-11-25T09:15:01.512567395Z [38;5;214m2026-11-25 09:15:01.512085+00:00 [warning] <0.605.0> By default, this feature can still be used for now.[0m
+rabbitmq-1  | 2026-11-25T09:15:01.512573907Z [38;5;214m2026-11-25 09:15:01.512085+00:00 [warning] <0.605.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+rabbitmq-1  | 2026-11-25T09:15:01.512578466Z [38;5;214m2026-11-25 09:15:01.512085+00:00 [warning] <0.605.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+rabbitmq-1  | 2026-11-25T09:15:01.512582253Z [38;5;214m2026-11-25 09:15:01.512085+00:00 [warning] <0.605.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+rabbitmq-1  | 2026-11-25T09:15:01.512586020Z [38;5;214m2026-11-25 09:15:01.512085+00:00 [warning] <0.605.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+rabbitmq-1  | 2026-11-25T09:15:01.512590007Z [38;5;214m2026-11-25 09:15:01.512085+00:00 [warning] <0.605.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+rabbitmq-1  | 2026-11-25T09:15:01.539562624Z 2026-11-25 09:15:01.539329+00:00 [info] <0.641.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+rabbitmq-1  | 2026-11-25T09:15:01.539941970Z 2026-11-25 09:15:01.539637+00:00 [info] <0.669.0> Statistics database started.[0m
+rabbitmq-1  | 2026-11-25T09:15:01.540115526Z 2026-11-25 09:15:01.539736+00:00 [info] <0.668.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+rabbitmq-1  | 2026-11-25T09:15:01.550416394Z 2026-11-25 09:15:01.550194+00:00 [info] <0.680.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+rabbitmq-1  | 2026-11-25T09:15:01.550552406Z 2026-11-25 09:15:01.550295+00:00 [info] <0.583.0> Ready to start client connection listeners[0m
+rabbitmq-1  | 2026-11-25T09:15:01.552125866Z 2026-11-25 09:15:01.551882+00:00 [info] <0.724.0> started TCP listener on [::]:5672[0m
+rabbitmq-1  | 2026-11-25T09:15:01.639033328Z  completed with 4 plugins.
+rabbitmq-1  | 2026-11-25T09:15:01.639175936Z 2026-11-25 09:15:01.638797+00:00 [info] <0.583.0> Server startup complete; 4 plugins started.[0m
+rabbitmq-1  | 2026-11-25T09:15:01.639182589Z 2026-11-25 09:15:01.638797+00:00 [info] <0.583.0>  * rabbitmq_prometheus[0m
+rabbitmq-1  | 2026-11-25T09:15:01.639186586Z 2026-11-25 09:15:01.638797+00:00 [info] <0.583.0>  * rabbitmq_management[0m
+rabbitmq-1  | 2026-11-25T09:15:01.639189912Z 2026-11-25 09:15:01.638797+00:00 [info] <0.583.0>  * rabbitmq_management_agent[0m
+rabbitmq-1  | 2026-11-25T09:15:01.639192988Z 2026-11-25 09:15:01.638797+00:00 [info] <0.583.0>  * rabbitmq_web_dispatch[0m
+rabbitmq-1  | 2026-11-25T09:15:01.790978044Z 2026-11-25 09:15:01.790590+00:00 [info] <0.10.0> Time to start RabbitMQ: 3805 ms[0m
+rabbitmq-1  | 2026-11-25T09:15:20.431329612Z 2026-11-25 09:15:20.430048+00:00 [info] <0.736.0> accepting AMQP connection 172.18.0.5:39608 -> 172.18.0.2:5672[0m
+rabbitmq-1  | 2026-11-25T09:15:20.509849802Z 2026-11-25 09:15:20.509068+00:00 [info] <0.736.0> connection 172.18.0.5:39608 -> 172.18.0.2:5672 has a client-provided name: rabbitConnectionFactory#77cddc0c:0[0m
+rabbitmq-1  | 2026-11-25T09:15:20.515574400Z 2026-11-25 09:15:20.515135+00:00 [info] <0.736.0> connection 172.18.0.5:39608 -> 172.18.0.2:5672 - rabbitConnectionFactory#77cddc0c:0: user 'batchflow' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-11-25T09:15:26.063722919Z 2026-11-25 09:15:26.062728+00:00 [info] <0.759.0> accepting AMQP connection 172.18.0.4:48210 -> 172.18.0.2:5672[0m
+rabbitmq-1  | 2026-11-25T09:15:26.096899482Z 2026-11-25 09:15:26.096274+00:00 [info] <0.759.0> connection 172.18.0.4:48210 -> 172.18.0.2:5672 has a client-provided name: rabbitConnectionFactory#2bb31455:0[0m
+rabbitmq-1  | 2026-11-25T09:15:26.100155771Z 2026-11-25 09:15:26.099920+00:00 [info] <0.759.0> connection 172.18.0.4:48210 -> 172.18.0.2:5672 - rabbitConnectionFactory#2bb31455:0: user 'batchflow' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-11-25T09:15:42.387154751Z [38;5;214m2026-11-25 09:15:42.381746+00:00 [warning] <0.736.0> closing AMQP connection <0.736.0> (172.18.0.5:39608 -> 172.18.0.2:5672 - rabbitConnectionFactory#77cddc0c:0, vhost: '/', user: 'batchflow', duration: '21s'):[0m
+rabbitmq-1  | 2026-11-25T09:15:42.387178155Z [38;5;214m2026-11-25 09:15:42.381746+00:00 [warning] <0.736.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-11-25T09:15:51.234152981Z 2026-11-25 09:15:51.233677+00:00 [info] <0.790.0> accepting AMQP connection 172.18.0.5:49362 -> 172.18.0.2:5672[0m
+rabbitmq-1  | 2026-11-25T09:15:51.266820758Z 2026-11-25 09:15:51.265804+00:00 [info] <0.790.0> connection 172.18.0.5:49362 -> 172.18.0.2:5672 has a client-provided name: rabbitConnectionFactory#2e3252:0[0m
+rabbitmq-1  | 2026-11-25T09:15:51.270141879Z 2026-11-25 09:15:51.269762+00:00 [info] <0.790.0> connection 172.18.0.5:49362 -> 172.18.0.2:5672 - rabbitConnectionFactory#2e3252:0: user 'batchflow' authenticated and granted access to vhost '/'[0m

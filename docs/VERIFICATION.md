@@ -1,6 +1,6 @@
 # BatchFlow 实际验证记录
 
-记录日期：2026-11-25。本轮完整复验为 **16:43:07–16:45:26（北京时间）**，运行标识 `20261125-closeout-02`，本机验收状态为 **PASSED**。这不包含尚未实跑的 Docker Compose 或远端 GitHub Actions。
+记录日期：2026-11-25。本轮完整本机复验为 **16:43:07–16:45:26（北京时间）**，运行标识 `20261125-closeout-02`，状态为 **PASSED**。随后 GitHub Actions 首次运行与隔离 Docker Compose 验收也已通过，详见第 7 节；两组证据分别保留。
 
 原始证据已固定至 [docs/evidence/20261125-closeout-02](evidence/20261125-closeout-02/report.json)，包含测试 JSON、Surefire XML/TXT、浏览器 trace、9 张截图、性能原始分项、RabbitMQ 断言与应用日志。文件 SHA-256 与受测源码快照见 [manifest.json](evidence/20261125-closeout-02/manifest.json)。复验与导出方法见 [交付说明](DELIVERY.md)。
 
@@ -24,7 +24,7 @@
 
 ## 2. 自动化测试、构建与等价 CI 校验
 
-本地已初始化 Git 仓库并按 `.github/workflows/ci.yml` 的校验步骤顺序执行通过（尚未配置远程 GitHub 仓库）：
+本地已初始化 Git 仓库并按 `.github/workflows/ci.yml` 的校验步骤顺序执行通过。以下为本机报告；后续已关联私有 GitHub 仓库并完成远端实跑，结果另见第 7 节：
 
 ### 前端（`web/`）
 
@@ -126,14 +126,24 @@
 
 ---
 
-## 7. 当前仍受限于系统环境的未实测项
+## 7. Docker 与 GitHub Actions 实机验收
 
-- **Docker Compose**：已补齐隔离容器冒烟入口 `scripts/verify-compose.mjs`，并修正 Dockerfile 在安装前复制 pnpm workspace 配置。Node 语法、YAML 静态解析通过；实际预检为 [BLOCKED / docker_preflight](evidence/20261125-closeout-02/container-preflight/report.json)，因为没有 Docker CLI。未执行镜像构建、`compose config` 或真实容器验收。
-- **远端 GitHub Actions**：已补齐前后端原始报告归档、隔离 Compose job 和失败时 artifacts 上传；本地没有用户指定的 remote，远端工作流尚未触发。登录信息不能代替具体仓库地址。
+- **本机历史环境限制**：本机 Docker 预检为 [BLOCKED / docker_preflight](evidence/20261125-closeout-02/container-preflight/report.json)，因为没有 Docker CLI；本机未执行容器构建、`compose config` 或真实容器验收。该原始记录保留，后续远端成功不改写本机历史状态。
+- **远端运行**：私有仓库 [yzxz111/batchflow](https://github.com/yzxz111/batchflow)，[GitHub Actions 45583013308](https://github.com/yzxz111/batchflow/actions/runs/45583013308)，首次运行（attempt 1），受测提交 `4f908cab0ad9320d684ec15e136726aff8942987`。运行时间 **2026-11-25 17:11:18–17:16:09（北京时间，结束时间按 GitHub updatedAt）**；`verify` job 为 **17:11:21–17:12:45**，`compose-smoke` 为 **17:12:48–17:16:08**，均成功。
+- **前后端测试与构建**：远端前端 **87/87**、后端 **33/33**，均零失败、零跳过；前端类型检查与构建、Maven 测试与打包全部通过。原始 [Vitest JSON](evidence/github-actions/45583013308/test-reports/test-results/frontend/vitest.json)、[Surefire 报告](evidence/github-actions/45583013308/test-reports/backend/target/surefire-reports/)及构建日志独立保存。
+- **真实 Compose 验收**：`scripts/verify-compose.mjs` 在 GitHub runner 的 Docker **29.4.2**、Compose **5.1.3** 上运行，报告时间 **17:12:52–17:16:04（北京时间）**，**9 项检查全部 PASSED**。容器档 RabbitMQ 使用 `rabbitmq:4.1-management` 标签，不沿用本机 RabbitMQ 4.4.1 的版本口径。原始 [Compose report.json](evidence/github-actions/45583013308/compose-smoke-evidence/2026-11-25T09-12-52-640Z-b282b646/report.json)记录各阶段时间、结果、任务与清理状态：
+
+  1. Docker/Compose 实际预检、隔离配置校验、镜像构建、API/Worker 健康与前端入口均通过；
+  2. 120 行混合导入完成，成功 **116**、错误 **4**；忙碌的单 Worker 完成并发提交的 **4×200 行**任务，每项成功 200、错误 0；
+  3. 1200 行任务强停前观察值与停机后持久化检查点均为 **100**；重启后的 `RECOVERED` 事件记录从第 **100** 行继续，最终成功 **1152**、错误 **48**、检查点 **1200**、`attempt=2`，商品精确 1152 条；
+  4. 数据库 `invalidCounts=0`、`duplicateSkus=0`，各任务商品/错误明细数量吻合；Outbox 未投递数及 RabbitMQ `messages/ready/unacknowledged` 全为 **0**；
+  5. 容器日志与最终状态保存成功，本轮独立项目、数据卷及镜像清理成功。
+
+- **证据归档与边界**：[远端证据目录](evidence/github-actions/45583013308/)保存 run/jobs/artifacts 元数据、两份原始 artifact ZIP、解包报告、汇总及 SHA-256 清单；两份 ZIP 校验和均与 GitHub digest 一致。本轮为 GitHub 隔离容器验收，没有公网生产部署；不扩大为多 Worker 集群、Broker 断网/重启或真实 NACK/Return 故障注入均已验证。后续文档与证据归档提交不改变应用源码，远端受测版本以上述 SHA 为准。
 
 ## 8. 交付证据与本轮修复
 
 - 本轮首次尝试 `closeout-01` 已通过测试，但在启动阶段因 PowerShell 7 将 JSON 时间自动解析为 DateTime、旧脚本又二次解析而产生 8 小时时差，误判 PID 重用。本轮已修复时间解析并保持 PID/角色/jar/创建时间校验；`closeout-02` 在 PowerShell 7 完整通过，Windows PowerShell 5.1 对真实进程检查也通过。首次失败摘要仍保留在证据目录的 `previous-attempt/`，没有覆盖成成功。
 - `Verify-Local.ps1` 在测试前保存源码与构建配置哈希，结束再次校验；`Export-Evidence.ps1` 只有在当前源码仍匹配时才能导出，避免把后改的代码冒充受测版本。完整证据清单为 56 个文件，另含清单文件本身。
 - 验收后的只读数据库快照：39 个合成/演示任务、246,226 个商品与同数唯一 SKU；任务不变量异常、任务成功数与商品数不一致、任务错误数与错误明细不一致、Outbox 未投递数均为 `0`。这是本项目累计测试数据，不能当作单次压测规模或真实业务记录。见 [database-snapshot.json](evidence/20261125-closeout-02/database-snapshot.json)。
-- 本轮结束 API/Worker 均已停止，RabbitMQ 正常清理，PostgreSQL 与既有数据保留。所有通过状态均限于报告明示的本机范围。
+- 本机复验结束后 API/Worker 均已停止，RabbitMQ 正常清理，PostgreSQL 与既有数据保留。本机与后续远端通过状态分别限于各自原始报告明示的范围。

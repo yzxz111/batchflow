@@ -1,0 +1,10 @@
+$ vue-tsc --noEmit && vite build
+[36mvite v7.2.2 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 1571 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  0.69 kB[22m[1m[22m[2m │ gzip:  0.47 kB[22m
+[2mdist/[22m[2massets/[22m[35mindex-CkpbZwfN.css  [39m[1m[2m 19.10 kB[22m[1m[22m[2m │ gzip:  4.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mindex-52zm6R0D.js   [39m[1m[2m112.02 kB[22m[1m[22m[2m │ gzip: 41.71 kB[22m
+[32m✓ built in 2.60s[39m

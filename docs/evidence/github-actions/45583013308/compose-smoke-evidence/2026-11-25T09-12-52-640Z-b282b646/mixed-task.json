@@ -1,0 +1,41 @@
+{
+  "id": "31065fa2-1a72-490a-a5f1-f7cb1fb01407",
+  "name": "Compose-mixed-120",
+  "filename": "mixed-120.csv",
+  "status": "COMPLETED_WITH_ERRORS",
+  "totalRows": 120,
+  "processedRows": 120,
+  "successRows": 116,
+  "errorRows": 4,
+  "progress": 100,
+  "batchSize": 40,
+  "attempt": 1,
+  "maxAttempts": 3,
+  "checkpoint": 120,
+  "workerId": null,
+  "createdAt": "2026-11-25T09:15:25.373993Z",
+  "startedAt": "2026-11-25T09:15:26.175667Z",
+  "finishedAt": "2026-11-25T09:15:28.672790Z",
+  "lastHeartbeatAt": "2026-11-25T09:15:27.919935Z",
+  "lastError": null,
+  "events": [
+    {
+      "id": 1,
+      "type": "CREATED",
+      "message": "任务已创建，等待 Worker 领取",
+      "createdAt": "2026-11-25T09:15:25.373993Z"
+    },
+    {
+      "id": 2,
+      "type": "STARTED",
+      "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+      "createdAt": "2026-11-25T09:15:26.175667Z"
+    },
+    {
+      "id": 3,
+      "type": "COMPLETED",
+      "message": "导入完成：成功 116 行，错误 4 行",
+      "createdAt": "2026-11-25T09:15:28.672790Z"
+    }
+  ]
+}

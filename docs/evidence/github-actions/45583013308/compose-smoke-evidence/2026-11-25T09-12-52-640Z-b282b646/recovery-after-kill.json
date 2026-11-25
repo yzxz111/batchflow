@@ -1,0 +1,35 @@
+{
+  "id": "6c73942f-9f77-4c07-a80b-02871cffa6df",
+  "name": "Compose-recovery-1200",
+  "filename": "recovery-1200.csv",
+  "status": "RUNNING",
+  "totalRows": 1200,
+  "processedRows": 100,
+  "successRows": 96,
+  "errorRows": 4,
+  "progress": 8.33,
+  "batchSize": 100,
+  "attempt": 1,
+  "maxAttempts": 3,
+  "checkpoint": 100,
+  "workerId": "worker-0628e671-a8f",
+  "createdAt": "2026-11-25T09:15:41.752870Z",
+  "startedAt": "2026-11-25T09:15:42.223019Z",
+  "finishedAt": null,
+  "lastHeartbeatAt": "2026-11-25T09:15:42.265365Z",
+  "lastError": null,
+  "events": [
+    {
+      "id": 16,
+      "type": "CREATED",
+      "message": "任务已创建，等待 Worker 领取",
+      "createdAt": "2026-11-25T09:15:41.752870Z"
+    },
+    {
+      "id": 17,
+      "type": "STARTED",
+      "message": "开始处理，从第 0 行检查点继续；Worker worker-0628e671-a8f",
+      "createdAt": "2026-11-25T09:15:42.223019Z"
+    }
+  ]
+}

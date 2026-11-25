@@ -113,7 +113,7 @@ $env:BATCHFLOW_TEST_DB_PASSWORD = ''
 .\scripts\mvn.ps1 -f backend/pom.xml verify
 ```
 
-`.github/workflows/ci.yml` 配置了独立 PostgreSQL service、前端测试／类型检查／构建，以及 Maven 测试与打包；只有实际运行后的结果才构成 CI 通过证据。
+`.github/workflows/ci.yml` 配置了独立 PostgreSQL service、前端测试／类型检查／构建，以及 Maven 测试与打包。2026-11-25 已在私有仓库 [yzxz111/batchflow](https://github.com/yzxz111/batchflow) 完成[首次 GitHub Actions 实跑](https://github.com/yzxz111/batchflow/actions/runs/45583013308)：受测提交 `4f908cab0ad9320d684ec15e136726aff8942987`，前端 **87/87**、后端 **33/33**、类型检查与构建全部通过；原始报告见 [远端验收证据](docs/evidence/github-actions/45583013308/)。
 
 ## 故障恢复演示
 
@@ -139,7 +139,7 @@ docker compose -f deploy/compose.yaml ps
 
 Compose 包含 PostgreSQL、RabbitMQ、API、Worker，上传文件通过命名卷共享。宿主机暴露的端口绑定 `127.0.0.1`，示例数据库／RabbitMQ 密码可以通过 `BATCHFLOW_DB_PASSWORD`、`BATCHFLOW_RABBIT_PASSWORD` 覆盖。RabbitMQ 管理页端口是 `15672`。
 
-**`app.queue-mode=rabbitmq` 队列档已通过便携版 Erlang + RabbitMQ 4.4.1 完成本机实机验收（见 [实际验证记录](docs/VERIFICATION.md) 与 `scripts/Verify-RabbitMQ.ps1`）。本轮实际 Docker 预检因缺少 `docker` CLI 记录为 `BLOCKED`，`deploy/compose.yaml` 容器编排仍待具备 Docker 的环境实跑。** Docker 镜像构建阶段只打包 Java 产物；真实数据库集成测试由前述本地命令和 CI 执行，不能以镜像构建成功替代测试。
+**`app.queue-mode=rabbitmq` 队列档已通过便携版 Erlang + RabbitMQ 4.4.1 完成本机实机验收，并于 2026-11-25 在 GitHub Actions 隔离环境完成真实 Docker Compose 验收，9 项检查全部通过。** 容器档使用 `rabbitmq:4.1-management`，覆盖健康检查、CSV 导入、忙碌 Worker 的四任务处理、强停检查点恢复、数据库不变量与队列清空，详见 [实际验证记录](docs/VERIFICATION.md)。本机缺少 `docker` CLI 的历史预检仍保留为 `BLOCKED`；远端容器验收不表示本机已安装 Docker，也不表示已进行公网生产部署。Docker 镜像构建阶段只打包 Java 产物；真实数据库集成测试由前述本地命令和 CI 执行，不能以镜像构建成功替代测试。
 
 ## 完整复验与证据交付
 
@@ -147,7 +147,7 @@ Compose 包含 PostgreSQL、RabbitMQ、API、Worker，上传文件通过命名�
 
 通过后使用 `scripts/Export-Evidence.ps1 -ReportDirectory <本次报告目录>` 导出至 `docs/evidence/`，生成 SHA-256 清单并检查源码未在验收后漂移。完整命令、环境要求和交付边界见 [交付与复验说明](docs/DELIVERY.md)。
 
-在具备 Docker Engine / Compose v2 的机器执行 `node scripts/verify-compose.mjs`，使用独立项目、端口和数据卷进行容器验收；GitHub Actions 已配置相同入口及失败时证据上传。实际运行结果以报告为准。
+在具备 Docker Engine / Compose v2 的机器执行 `node scripts/verify-compose.mjs`，使用独立项目、端口和数据卷进行容器验收；GitHub Actions 已使用相同入口通过验收并上传证据。两份原始 artifacts、解包报告与 SHA-256 清单保存在 [本次远端证据目录](docs/evidence/github-actions/45583013308/)，具体通过范围以原始报告为准。
 
 ## 项目说明的证据边界
 
