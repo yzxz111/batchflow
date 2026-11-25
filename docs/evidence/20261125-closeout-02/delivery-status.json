@@ -1,0 +1,7 @@
+{
+  "localVerification": "PASSED",
+  "dockerCompose": "BLOCKED_NO_DOCKER_CLI",
+  "remoteGitHubActions": "PENDING_REPOSITORY_URL",
+  "scope": "Local v1 acceptance is complete. Container execution and remote CI remain explicitly pending external prerequisites.",
+  "recordedAt": "2026-11-25T08:46:25.9212270Z"
+}

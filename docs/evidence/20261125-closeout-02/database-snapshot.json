@@ -1,0 +1,1 @@
+{"capturedAt" : "2026-11-25T16:46:24.780554+08:00", "database" : "batchflow", "transactionReadOnly" : "on", "taskCount" : 39, "productCount" : 246226, "uniqueSkuCount" : 246226, "taskInvariantFailures" : 0, "taskProductCountMismatches" : 0, "taskErrorCountMismatches" : 0, "unpublishedOutbox" : 0}

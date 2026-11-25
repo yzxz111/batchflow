@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "runId": "20261125T084440976Z-3832534d",
+  "status": "PASSED",
+  "startedAtUtc": "2026-11-25T08:44:40.9955600Z",
+  "finishedAtUtc": "2026-11-25T08:45:26.4982157Z",
+  "queueMode": "rabbitmq",
+  "checks": [
+    {
+      "name": "api-and-worker-use-rabbitmq",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:04.4299007Z"
+    },
+    {
+      "name": "single-task-and-four-concurrent-tasks-completed",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:11.9738828Z"
+    },
+    {
+      "name": "worker-stopped-before-task-finished",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:13.0021912Z"
+    },
+    {
+      "name": "recovery-terminal-counts-and-attempt",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:21.7769933Z"
+    },
+    {
+      "name": "recovered-event-present",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:21.7787503Z"
+    },
+    {
+      "name": "recovered-event-checkpoint-readable",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:21.7844810Z"
+    },
+    {
+      "name": "recovered-from-persisted-checkpoint",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:21.7894986Z"
+    },
+    {
+      "name": "recovery-products-unique-and-complete",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:21.9501724Z"
+    },
+    {
+      "name": "target-queue-exists-exactly-once",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:22.9176807Z"
+    },
+    {
+      "name": "target-queue-ready-and-unacknowledged-are-zero",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:22.9177287Z"
+    },
+    {
+      "name": "outbox-count-is-valid-integer",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:22.9802400Z"
+    },
+    {
+      "name": "outbox-pending-is-zero",
+      "passed": true,
+      "checkedAtUtc": "2026-11-25T08:45:22.9813512Z"
+    }
+  ],
+  "nativeCommands": [
+    {
+      "name": "start-project-database",
+      "exitCode": 0,
+      "completed": true
+    },
+    {
+      "name": "rabbitmq-await-startup",
+      "exitCode": 0,
+      "completed": true
+    },
+    {
+      "name": "rabbitmq-list-users",
+      "exitCode": 0,
+      "completed": true
+    },
+    {
+      "name": "rabbitmq-set-demo-permissions",
+      "exitCode": 0,
+      "completed": true
+    },
+    {
+      "name": "rabbitmq-node-task-scenarios",
+      "exitCode": 0,
+      "completed": true
+    },
+    {
+      "name": "rabbitmq-list-queues",
+      "exitCode": 0,
+      "completed": true
+    },
+    {
+      "name": "postgres-outbox-pending-count",
+      "exitCode": 0,
+      "completed": true
+    },
+    {
+      "name": "rabbitmq-stop",
+      "exitCode": 0,
+      "completed": true
+    }
+  ],
+  "tasks": {
+    "createdTasks": [
+      {
+        "id": "19fc7644-6173-489c-b170-9b0a68b74669",
+        "name": "RMQ-单任务验证",
+        "totalRows": 120,
+        "expectedValid": 116,
+        "expectedError": 4,
+        "prefix": "RMQ-A3E72B15"
+      },
+      {
+        "id": "abdaab3f-2dea-4acf-8e0b-beca6b32f7cb",
+        "name": "RMQ-并发1",
+        "totalRows": 200,
+        "expectedValid": 200,
+        "expectedError": 0,
+        "prefix": "RMQ-15314B99"
+      },
+      {
+        "id": "f10ceec2-091d-4cf9-a4de-89411c38db04",
+        "name": "RMQ-并发3",
+        "totalRows": 200,
+        "expectedValid": 200,
+        "expectedError": 0,
+        "prefix": "RMQ-2B0CB3BF"
+      },
+      {
+        "id": "277abe32-d7da-43fd-9948-17d5b360977e",
+        "name": "RMQ-并发2",
+        "totalRows": 200,
+        "expectedValid": 200,
+        "expectedError": 0,
+        "prefix": "RMQ-62B4C8B3"
+      },
+      {
+        "id": "3879be4a-7af8-47d9-aed0-1780a95ee3db",
+        "name": "RMQ-并发4",
+        "totalRows": 200,
+        "expectedValid": 200,
+        "expectedError": 0,
+        "prefix": "RMQ-95FBE95E"
+      },
+      {
+        "id": "a22ecef9-8077-44c4-86bd-38f71ea15adb",
+        "name": "RMQ-故障恢复实测",
+        "totalRows": 600,
+        "expectedValid": 576,
+        "expectedError": 24,
+        "prefix": "RMQ-2CCBD72B"
+      }
+    ],
+    "single": {
+      "id": "19fc7644-6173-489c-b170-9b0a68b74669",
+      "status": "COMPLETED_WITH_ERRORS",
+      "processedRows": 120,
+      "successRows": 116,
+      "errorRows": 4,
+      "checkpoint": 120
+    },
+    "concurrent": [
+      {
+        "id": "abdaab3f-2dea-4acf-8e0b-beca6b32f7cb",
+        "status": "COMPLETED",
+        "processedRows": 200,
+        "successRows": 200,
+        "errorRows": 0,
+        "checkpoint": 200
+      },
+      {
+        "id": "277abe32-d7da-43fd-9948-17d5b360977e",
+        "status": "COMPLETED",
+        "processedRows": 200,
+        "successRows": 200,
+        "errorRows": 0,
+        "checkpoint": 200
+      },
+      {
+        "id": "f10ceec2-091d-4cf9-a4de-89411c38db04",
+        "status": "COMPLETED",
+        "processedRows": 200,
+        "successRows": 200,
+        "errorRows": 0,
+        "checkpoint": 200
+      },
+      {
+        "id": "3879be4a-7af8-47d9-aed0-1780a95ee3db",
+        "status": "COMPLETED",
+        "processedRows": 200,
+        "successRows": 200,
+        "errorRows": 0,
+        "checkpoint": 200
+      }
+    ],
+    "recovery": {
+      "id": "a22ecef9-8077-44c4-86bd-38f71ea15adb",
+      "prefix": "RMQ-2CCBD72B",
+      "expectedValid": 576,
+      "expectedError": 24
+    }
+  },
+  "recovery": {
+    "taskId": "a22ecef9-8077-44c4-86bd-38f71ea15adb",
+    "observedBeforeStop": {
+      "processedRows": 100,
+      "checkpoint": 100,
+      "observedAtUtc": "2026-11-25T08:45:12.7762422Z"
+    },
+    "persistedAfterStop": {
+      "processedRows": 200,
+      "checkpoint": 200,
+      "observedAtUtc": "2026-11-25T08:45:13.0003803Z"
+    },
+    "recoveredCheckpointFromEvent": 200,
+    "final": {
+      "processedRows": 600,
+      "status": "COMPLETED_WITH_ERRORS",
+      "checkpoint": 600,
+      "errorRows": 24,
+      "successRows": 576,
+      "attempt": 2
+    },
+    "productCount": 576,
+    "events": [
+      {
+        "id": 132,
+        "type": "CREATED",
+        "createdAt": "2026-11-25T08:45:11.946888Z"
+      },
+      {
+        "id": 133,
+        "type": "STARTED",
+        "createdAt": "2026-11-25T08:45:12.538485Z"
+      },
+      {
+        "id": 134,
+        "type": "RECOVERED",
+        "createdAt": "2026-11-25T08:45:20.903216Z"
+      },
+      {
+        "id": 135,
+        "type": "COMPLETED",
+        "createdAt": "2026-11-25T08:45:21.523817Z"
+      }
+    ]
+  },
+  "queue": {
+    "name": "batchflow.imports",
+    "messages": 0,
+    "messagesReady": 0,
+    "messagesUnacknowledged": 0
+  },
+  "outboxPendingAfterRun": 0,
+  "failure": null,
+  "cleanupFailures": []
+}

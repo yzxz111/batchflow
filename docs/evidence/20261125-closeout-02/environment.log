@@ -1,0 +1,9 @@
+3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Playwright import OK
+openjdk version "21.0.13.1" 2026-11-17 LTS
+OpenJDK Runtime Environment Temurin-21.0.13.1+2 (build 21.0.13.1+2-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.13.1+2 (build 21.0.13.1+2-LTS, mixed mode, sharing)
+v24.22.3
+11.25.0
+The project PostgreSQL cluster is already running.
+PostgreSQL ready: jdbc:postgresql://127.0.0.1:15439/batchflow (user=batchflow, local demo trust authentication).

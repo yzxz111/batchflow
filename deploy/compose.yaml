@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: batchflow
       POSTGRES_PASSWORD: ${BATCHFLOW_DB_PASSWORD:-batchflow_local_demo}
     ports:
-      - "127.0.0.1:15439:5432"
+      - "127.0.0.1:${BATCHFLOW_POSTGRES_PORT:-15439}:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     healthcheck:
@@ -23,8 +23,8 @@ services:
       RABBITMQ_DEFAULT_USER: batchflow
       RABBITMQ_DEFAULT_PASS: ${BATCHFLOW_RABBIT_PASSWORD:-batchflow_local_demo}
     ports:
-      - "127.0.0.1:5672:5672"
-      - "127.0.0.1:15672:15672"
+      - "127.0.0.1:${BATCHFLOW_RABBIT_PORT:-5672}:5672"
+      - "127.0.0.1:${BATCHFLOW_RABBIT_MANAGEMENT_PORT:-15672}:15672"
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     healthcheck:
@@ -35,7 +35,7 @@ services:
     restart: unless-stopped
 
   api:
-    image: batchflow:local
+    image: ${BATCHFLOW_APP_IMAGE:-batchflow:local}
     build:
       context: ..
       dockerfile: deploy/Dockerfile
@@ -50,7 +50,7 @@ services:
       JAVA_TOOL_OPTIONS: -Xms128m -Xmx512m
     command: ["--server.address=0.0.0.0", "--server.port=18090", "--app.role=api", "--app.queue-mode=rabbitmq", "--app.storage-dir=/app/storage"]
     ports:
-      - "127.0.0.1:18090:18090"
+      - "127.0.0.1:${BATCHFLOW_API_PORT:-18090}:18090"
     volumes:
       - import-storage:/app/storage
     depends_on:
@@ -67,12 +67,12 @@ services:
     restart: unless-stopped
 
   worker:
-    image: batchflow:local
+    image: ${BATCHFLOW_APP_IMAGE:-batchflow:local}
     build:
       context: ..
       dockerfile: deploy/Dockerfile
     environment: *app-environment
-    command: ["--server.address=0.0.0.0", "--server.port=18091", "--app.role=worker", "--app.queue-mode=rabbitmq", "--app.storage-dir=/app/storage", "--app.worker.batch-delay-ms=0"]
+    command: ["--server.address=0.0.0.0", "--server.port=18091", "--app.role=worker", "--app.queue-mode=rabbitmq", "--app.storage-dir=/app/storage", "--app.worker.batch-delay-ms=${BATCHFLOW_WORKER_BATCH_DELAY_MS:-0}", "--app.worker.lease-seconds=${BATCHFLOW_WORKER_LEASE_SECONDS:-15}", "--app.worker.poll-ms=${BATCHFLOW_WORKER_POLL_MS:-1000}"]
     volumes:
       - import-storage:/app/storage
     depends_on:
@@ -84,7 +84,7 @@ services:
       timeout: 5s
       start_period: 40s
       retries: 10
-    restart: unless-stopped
+    restart: ${BATCHFLOW_WORKER_RESTART_POLICY:-unless-stopped}
 
 volumes:
   postgres-data:

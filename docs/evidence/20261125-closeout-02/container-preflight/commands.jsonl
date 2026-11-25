@@ -1,0 +1,1 @@
+{"label":"docker-version","command":["docker","version","--format","{{json .Server.Version}}"],"startedAt":"2026-11-25T08:37:48.279Z","finishedAt":"2026-11-25T08:37:48.287Z","code":-4058,"timedOut":false,"error":"spawn docker ENOENT","stdout":"001-docker-version.stdout.log","stderr":"001-docker-version.stderr.log"}

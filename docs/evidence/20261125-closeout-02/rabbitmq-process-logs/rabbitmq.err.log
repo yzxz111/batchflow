@@ -1,0 +1,2 @@
+[os_mon] win32 supervisor port (win32sysinfo): Erlang has closed
+Gracefully halting Erlang VM

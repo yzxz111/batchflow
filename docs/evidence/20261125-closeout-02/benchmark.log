@@ -1,0 +1,12 @@
+Stopped project worker process 28816.
+Started worker as PID 51424 on 127.0.0.1:18091.
+Worker restarted, health=UP. In-flight tasks are recovered after their previous lease expires.
+{
+  "status": "PASSED",
+  "report": "E:\\deep\\批量数据处理与任务调度平台\\.runtime\\evidence\\local\\20261125-closeout-02\\benchmark\\report.json",
+  "resultCounts": {
+    "passed": 3,
+    "failed": 0,
+    "planned": 3
+  }
+}

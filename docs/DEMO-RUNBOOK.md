@@ -100,6 +100,8 @@ processedRows <= totalRows
 
 ## 可以说明与暂不能说明的内容
 
+完整自动复验与证据导出使用 `scripts/Verify-Local.ps1`、`scripts/Export-Evidence.ps1`，详见 [交付与复验说明](DELIVERY.md)。本轮本机结果已固定在 `docs/evidence/20261125-closeout-02/`；本地验收通过与 Docker/远端 CI 待验证分别记录。
+
 可以结合源代码解释事务边界、检查点、租约、fencing、幂等、异常分类和 Outbox 设计。能声称已验证的内容，以 `VERIFICATION.md` 的实际证据为准。
 
 未完成实机验证前，不宣称 RabbitMQ 投递、Docker Compose、跨机器恢复或生产高并发已通过。当前没有 cron 或 DAG 功能。

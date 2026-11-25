@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "status": "FAILED",
+  "startedAt": "2026-11-25T08:37:24.6230182Z",
+  "finishedAt": "2026-11-25T08:37:56.6445414Z",
+  "sourceRevision": "32bd2396bab0d92a45182a4068f350faf4aaef01",
+  "sourceHasChanges": true,
+  "scope": "Local Windows database and real RabbitMQ profiles; excludes Docker execution and remote CI.",
+  "steps": [
+    {
+      "name": "environment",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:37:24.7702516Z",
+      "finishedAt": "2026-11-25T08:37:26.1148449Z",
+      "error": null
+    },
+    {
+      "name": "frontend-install",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:37:26.1175727Z",
+      "finishedAt": "2026-11-25T08:37:26.6496156Z",
+      "error": null
+    },
+    {
+      "name": "frontend-test",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:37:26.6511438Z",
+      "finishedAt": "2026-11-25T08:37:30.1067940Z",
+      "error": null
+    },
+    {
+      "name": "frontend-build",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:37:30.1084739Z",
+      "finishedAt": "2026-11-25T08:37:35.9862984Z",
+      "error": null
+    },
+    {
+      "name": "backend-verify",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:37:35.9877224Z",
+      "finishedAt": "2026-11-25T08:37:55.2560023Z",
+      "error": null
+    },
+    {
+      "name": "database-profile-start",
+      "status": "FAILED",
+      "startedAt": "2026-11-25T08:37:55.2572823Z",
+      "finishedAt": "2026-11-25T08:37:56.2870248Z",
+      "error": "Refusing to operate on reused PID 26548: process creation time differs."
+    }
+  ],
+  "error": "Refusing to operate on reused PID 26548: process creation time differs.",
+  "cleanup": "Refusing to operate on reused PID 26548: process creation time differs."
+}

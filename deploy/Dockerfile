@@ -1,7 +1,7 @@
 FROM node:24-bookworm-slim AS web-build
 WORKDIR /workspace/web
 RUN npm install --global pnpm@11.25.0
-COPY web/package.json web/pnpm-lock.yaml ./
+COPY web/package.json web/pnpm-lock.yaml web/pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY web/ ./
 RUN pnpm test && pnpm build

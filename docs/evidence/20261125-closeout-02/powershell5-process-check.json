@@ -1,0 +1,7 @@
+{
+  "status": "PASSED",
+  "host": "Windows PowerShell 5.1",
+  "scope": "Real project API/Worker PID ownership, creation-time and health checks plus PostgreSQL status",
+  "log": "powershell5-process-check.log",
+  "checkedAt": "2026-11-25T08:44:24.0175416Z"
+}

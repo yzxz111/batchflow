@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "status": "PASSED",
+  "startedAt": "2026-11-25T08:43:07.4359336Z",
+  "finishedAt": "2026-11-25T08:45:26.6668946Z",
+  "sourceRevision": "32bd2396bab0d92a45182a4068f350faf4aaef01",
+  "sourceHasChanges": true,
+  "scope": "Local Windows database and real RabbitMQ profiles; excludes Docker execution and remote CI.",
+  "sourceSnapshot": "source-files.json",
+  "steps": [
+    {
+      "name": "environment",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:07.5559244Z",
+      "finishedAt": "2026-11-25T08:43:08.5104367Z",
+      "error": null
+    },
+    {
+      "name": "frontend-test",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:08.5130633Z",
+      "finishedAt": "2026-11-25T08:43:11.5160652Z",
+      "error": null
+    },
+    {
+      "name": "frontend-build",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:11.5176361Z",
+      "finishedAt": "2026-11-25T08:43:17.1911979Z",
+      "error": null
+    },
+    {
+      "name": "backend-verify",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:17.1925662Z",
+      "finishedAt": "2026-11-25T08:43:33.4216724Z",
+      "error": null
+    },
+    {
+      "name": "database-profile-start",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:33.4227877Z",
+      "finishedAt": "2026-11-25T08:43:41.1790055Z",
+      "error": null
+    },
+    {
+      "name": "browser-e2e",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:41.1802761Z",
+      "finishedAt": "2026-11-25T08:44:02.9077677Z",
+      "error": null
+    },
+    {
+      "name": "benchmark",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:44:02.9094652Z",
+      "finishedAt": "2026-11-25T08:44:40.2112005Z",
+      "error": null
+    },
+    {
+      "name": "database-profile-stop",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:44:40.2132155Z",
+      "finishedAt": "2026-11-25T08:44:40.9102526Z",
+      "error": null
+    },
+    {
+      "name": "rabbitmq-profile",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:44:40.9119786Z",
+      "finishedAt": "2026-11-25T08:45:26.5954490Z",
+      "error": null
+    },
+    {
+      "name": "source-integrity",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:45:26.5974109Z",
+      "finishedAt": "2026-11-25T08:45:26.6616799Z",
+      "error": null
+    }
+  ],
+  "error": null,
+  "cleanup": {
+    "roles": [
+      {
+        "role": "worker",
+        "status": "STOPPED"
+      },
+      {
+        "role": "api",
+        "status": "STOPPED"
+      }
+    ],
+    "database": "PostgreSQL and existing data retained."
+  }
+}

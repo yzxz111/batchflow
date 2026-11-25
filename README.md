@@ -139,7 +139,15 @@ docker compose -f deploy/compose.yaml ps
 
 Compose 包含 PostgreSQL、RabbitMQ、API、Worker，上传文件通过命名卷共享。宿主机暴露的端口绑定 `127.0.0.1`，示例数据库／RabbitMQ 密码可以通过 `BATCHFLOW_DB_PASSWORD`、`BATCHFLOW_RABBIT_PASSWORD` 覆盖。RabbitMQ 管理页端口是 `15672`。
 
-**`app.queue-mode=rabbitmq` 队列档已通过便携版 Erlang + RabbitMQ 4.4.1 完成本机实机验收（见 [实际验证记录](docs/VERIFICATION.md) 与 `scripts/Verify-RabbitMQ.ps1`）；由于本机为 Windows 11 家庭版且当前终端无管理员提权/未启用 WSL2 重启，Docker Desktop 与 `deploy/compose.yaml` 容器编排尚未在本机实机启动。** Docker 镜像构建阶段只打包 Java 产物；真实数据库集成测试由前述本地命令和 CI 执行，不能以镜像构建成功替代测试。
+**`app.queue-mode=rabbitmq` 队列档已通过便携版 Erlang + RabbitMQ 4.4.1 完成本机实机验收（见 [实际验证记录](docs/VERIFICATION.md) 与 `scripts/Verify-RabbitMQ.ps1`）。本轮实际 Docker 预检因缺少 `docker` CLI 记录为 `BLOCKED`，`deploy/compose.yaml` 容器编排仍待具备 Docker 的环境实跑。** Docker 镜像构建阶段只打包 Java 产物；真实数据库集成测试由前述本地命令和 CI 执行，不能以镜像构建成功替代测试。
+
+## 完整复验与证据交付
+
+在 API/Worker 停止的情况下执行 `scripts/Verify-Local.ps1`，可统一运行前后端测试与构建、浏览器交互、单机性能样本和真实 RabbitMQ 恢复验收。每次写入独立 `.runtime/evidence/local/<run-id>/`，保留原始 JSON、Surefire 报告、日志、截图、trace 和受测源码哈希；失败会保留报告并中断后续步骤。
+
+通过后使用 `scripts/Export-Evidence.ps1 -ReportDirectory <本次报告目录>` 导出至 `docs/evidence/`，生成 SHA-256 清单并检查源码未在验收后漂移。完整命令、环境要求和交付边界见 [交付与复验说明](docs/DELIVERY.md)。
+
+在具备 Docker Engine / Compose v2 的机器执行 `node scripts/verify-compose.mjs`，使用独立项目、端口和数据卷进行容器验收；GitHub Actions 已配置相同入口及失败时证据上传。实际运行结果以报告为准。
 
 ## 项目说明的证据边界
 

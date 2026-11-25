@@ -19,7 +19,16 @@ function Get-TaskflowOwnedProcess {
         throw "Refusing to operate on PID $($record.pid): it does not match this project's $Role process."
     }
     $startedAt = (Get-Process -Id $record.pid -ErrorAction Stop).StartTime.ToUniversalTime()
-    $recordedAt = [DateTime]::Parse($record.startedAt).ToUniversalTime()
+    # PowerShell 7 can materialize JSON ISO timestamps as DateTime. Parsing that
+    # object again first formats it in the current culture and loses its UTC
+    # kind; Windows PowerShell 5 instead returns the original string.
+    $recordedAt = if ($record.startedAt -is [DateTime]) {
+        $record.startedAt.ToUniversalTime()
+    } elseif ($record.startedAt -is [DateTimeOffset]) {
+        $record.startedAt.UtcDateTime
+    } else {
+        [DateTimeOffset]::Parse([string]$record.startedAt, [Globalization.CultureInfo]::InvariantCulture).UtcDateTime
+    }
     if ([Math]::Abs(($startedAt - $recordedAt).TotalSeconds) -gt 1) {
         throw "Refusing to operate on reused PID $($record.pid): process creation time differs."
     }

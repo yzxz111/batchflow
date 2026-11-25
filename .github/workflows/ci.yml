@@ -4,9 +4,13 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     services:
       postgres:
         image: postgres:17-alpine
@@ -37,21 +41,57 @@ jobs:
           distribution: temurin
           java-version: '21'
           cache: maven
+      - name: Prepare report directories
+        run: mkdir -p test-results/frontend test-results/backend
       - name: Frontend install
         working-directory: web
-        run: pnpm install --frozen-lockfile
+        run: |
+          set -o pipefail
+          pnpm install --frozen-lockfile 2>&1 | tee ../test-results/frontend/install.log
       - name: Frontend tests
         working-directory: web
-        run: pnpm test
+        run: |
+          set -o pipefail
+          pnpm exec vitest run --reporter=default --reporter=json --outputFile=../test-results/frontend/vitest.json 2>&1 | tee ../test-results/frontend/vitest.log
       - name: Frontend type check and build
         working-directory: web
-        run: pnpm build
+        run: |
+          set -o pipefail
+          pnpm build 2>&1 | tee ../test-results/frontend/build.log
       - name: Backend tests and package
-        run: mvn -B -f backend/pom.xml verify
+        run: |
+          set -o pipefail
+          mvn -B -f backend/pom.xml verify 2>&1 | tee test-results/backend/maven.log
       - name: Upload test reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-reports
-          path: backend/target/surefire-reports/
-          if-no-files-found: ignore
+          path: |
+            test-results/frontend/
+            test-results/backend/
+            backend/target/surefire-reports/
+          retention-days: 14
+          if-no-files-found: warn
+
+  compose-smoke:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build isolated Compose stack and verify recovery
+        env:
+          BATCHFLOW_COMPOSE_REPORT_DIR: test-results/compose
+        run: node scripts/verify-compose.mjs
+      - name: Upload Compose evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compose-smoke-evidence
+          path: test-results/compose/
+          retention-days: 14
+          if-no-files-found: warn

@@ -1,0 +1,4 @@
+api process: PID=3676, status=UP, queue=database, url=http://127.0.0.1:18090
+worker process: PID=51424, status=UP, queue=database, url=http://127.0.0.1:18091
+pg_ctl: server is running (PID: 21436)
+E:/deep/yijia-local-runtime/tools/pgsql/bin/postgres.exe "-D" "E:/deep/�������ݴ������������ƽ̨/.runtime/postgres"

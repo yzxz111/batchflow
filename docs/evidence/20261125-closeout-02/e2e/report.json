@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "kind": "browser-e2e",
+  "runId": "20261125T084341439186Z-04a0238d",
+  "runTag": "72A6A285",
+  "status": "PASSED",
+  "startedAt": "2026-11-25T08:43:41.441+00:00",
+  "finishedAt": "2026-11-25T08:44:02.855+00:00",
+  "durationMs": 21414.207,
+  "reportDirectory": "E:\\deep\\批量数据处理与任务调度平台\\.runtime\\evidence\\local\\20261125-closeout-02\\e2e",
+  "baseUrl": "http://127.0.0.1:18090",
+  "source": {
+    "script": "scripts/e2e-browser.py",
+    "sha256": "3ff9a4a6336a17cd76504cd54ad7beaaf077dd1854b3acfe1e13993884ba553e"
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "platform": "Windows",
+    "browserExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "browserVersion": "158.0.8127.37"
+  },
+  "scenarioGrouping": {
+    "functional": 7,
+    "layout": 1,
+    "diagnostic": 1,
+    "total": 9
+  },
+  "scenarios": [
+    {
+      "id": "overview_and_worker_status",
+      "group": "functional",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:42.917+00:00",
+      "finishedAt": "2026-11-25T08:43:43.742+00:00"
+    },
+    {
+      "id": "template_csv_download_and_bom",
+      "group": "functional",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:43.742+00:00",
+      "finishedAt": "2026-11-25T08:43:44.170+00:00"
+    },
+    {
+      "id": "full_import_120_rows_with_error_csv_formula_escaping",
+      "group": "functional",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:44.170+00:00",
+      "finishedAt": "2026-11-25T08:43:47.998+00:00"
+    },
+    {
+      "id": "product_search_and_task_link",
+      "group": "functional",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:47.998+00:00",
+      "finishedAt": "2026-11-25T08:43:48.959+00:00"
+    },
+    {
+      "id": "cancel_running_task_stops_subsequent_batches",
+      "group": "functional",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:48.959+00:00",
+      "finishedAt": "2026-11-25T08:43:54.875+00:00"
+    },
+    {
+      "id": "failed_task_manual_retry_from_zero_checkpoint",
+      "group": "functional",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:43:54.875+00:00",
+      "finishedAt": "2026-11-25T08:44:00.491+00:00"
+    },
+    {
+      "id": "offline_error_banner_and_recovery",
+      "group": "functional",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:44:00.491+00:00",
+      "finishedAt": "2026-11-25T08:44:00.801+00:00"
+    },
+    {
+      "id": "narrow_viewport_390x844_no_overflow",
+      "group": "layout",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:44:00.801+00:00",
+      "finishedAt": "2026-11-25T08:44:02.853+00:00"
+    },
+    {
+      "id": "zero_unexpected_console_or_page_errors",
+      "group": "diagnostic",
+      "status": "PASSED",
+      "startedAt": "2026-11-25T08:44:02.853+00:00",
+      "finishedAt": "2026-11-25T08:44:02.855+00:00"
+    }
+  ],
+  "activeScenarioId": null,
+  "observations": {
+    "workerStatusText": "在线 Worker 1",
+    "templateDownload": {
+      "bytes": 289,
+      "utf8Bom": true,
+      "headerAndExampleRowVerified": true
+    },
+    "importTask": {
+      "id": "b777b615-3746-4d45-88c4-f36f398448f1",
+      "status": "COMPLETED_WITH_ERRORS",
+      "totalRows": 120,
+      "processedRows": 120,
+      "successRows": 105,
+      "errorRows": 15,
+      "checkpoint": 120,
+      "attempt": 1,
+      "maxAttempts": 3
+    },
+    "errorDownload": {
+      "bytes": 3235,
+      "utf8Bom": true,
+      "headerAndFormulaEscapingVerified": true,
+      "errorPages": 2
+    },
+    "cancellation": {
+      "before": {
+        "id": "ca59266c-4118-4791-9090-3f303f0e2cc7",
+        "status": "CANCELLED",
+        "totalRows": 400,
+        "processedRows": 240,
+        "successRows": 240,
+        "errorRows": 0,
+        "checkpoint": 240,
+        "attempt": 1,
+        "maxAttempts": 3
+      },
+      "after": {
+        "id": "ca59266c-4118-4791-9090-3f303f0e2cc7",
+        "status": "CANCELLED",
+        "totalRows": 400,
+        "processedRows": 240,
+        "successRows": 240,
+        "errorRows": 0,
+        "checkpoint": 240,
+        "attempt": 1,
+        "maxAttempts": 3
+      },
+      "observationWindowSeconds": 2.5
+    },
+    "manualRetry": {
+      "failedTask": {
+        "id": "96414e6d-6e3b-4dd4-ae44-5b1dfab6c321",
+        "status": "FAILED",
+        "totalRows": 20,
+        "processedRows": 0,
+        "successRows": 0,
+        "errorRows": 0,
+        "checkpoint": 0,
+        "attempt": 1,
+        "maxAttempts": 1
+      },
+      "coverage": "Manual retry from checkpoint 0; does not establish nonzero-checkpoint recovery.",
+      "completedTask": {
+        "id": "96414e6d-6e3b-4dd4-ae44-5b1dfab6c321",
+        "status": "COMPLETED",
+        "totalRows": 20,
+        "processedRows": 20,
+        "successRows": 20,
+        "errorRows": 0,
+        "checkpoint": 20,
+        "attempt": 1,
+        "maxAttempts": 1
+      }
+    },
+    "narrowLayouts": {
+      "overview": {
+        "viewportWidth": 390,
+        "documentScrollWidth": 390,
+        "targetClientWidth": 390,
+        "targetScrollWidth": 390,
+        "targetWidth": 390,
+        "targetLeft": 0,
+        "targetRight": 390
+      },
+      "importWizard": {
+        "viewportWidth": 390,
+        "documentScrollWidth": 390,
+        "targetClientWidth": 370,
+        "targetScrollWidth": 370,
+        "targetWidth": 370,
+        "targetLeft": 10,
+        "targetRight": 380
+      },
+      "taskDrawer": {
+        "viewportWidth": 390,
+        "documentScrollWidth": 390,
+        "targetClientWidth": 390,
+        "targetScrollWidth": 390,
+        "targetWidth": 390,
+        "targetLeft": 0,
+        "targetRight": 390
+      }
+    }
+  },
+  "cleanupErrors": [],
+  "diagnostics": {
+    "countingPolicy": "Unexpected error assertions exclude only the deliberate offline-and-recovery window. All errors in that window are retained separately, not silently discarded.",
+    "unexpectedConsoleErrors": [],
+    "unexpectedPageErrors": [],
+    "intentionalOfflineConsoleErrors": [
+      "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+    ],
+    "intentionalOfflinePageErrors": [],
+    "intentionalOfflineWindow": {
+      "startedAt": "2026-11-25T08:44:00.571+00:00",
+      "finishedAt": "2026-11-25T08:44:00.801+00:00"
+    },
+    "counts": {
+      "unexpectedConsoleErrors": 0,
+      "unexpectedPageErrors": 0,
+      "intentionalOfflineConsoleErrors": 1,
+      "intentionalOfflinePageErrors": 0
+    }
+  },
+  "artifacts": {
+    "screenshots": [
+      "screenshots\\01-overview-desktop.png",
+      "screenshots\\02-wizard-step2.png",
+      "screenshots\\03-drawer-completed-errors.png",
+      "screenshots\\04-drawer-cancelled.png",
+      "screenshots\\05-drawer-failed.png",
+      "screenshots\\06-offline-alert.png",
+      "screenshots\\07-narrow-overview.png",
+      "screenshots\\08-narrow-wizard.png",
+      "screenshots\\09-narrow-drawer.png"
+    ],
+    "trace": {
+      "status": "CAPTURED",
+      "path": "trace.zip",
+      "scope": "Fresh unauthenticated loopback-only context and synthetic CSV fixtures; full actions/network/snapshots/screenshots, source capture disabled. No environment, cookies, authorization headers, or credentials are added by this script."
+    }
+  },
+  "limitations": [
+    "Manual retry deliberately fails before the first batch, so its original checkpoint is 0.",
+    "This run checks one local API/browser workflow; nonzero checkpoint recovery is established by separate backend/Worker recovery evidence."
+  ],
+  "scenarioCounts": {
+    "PASSED": 9,
+    "FAILED": 0,
+    "NOT_RUN": 0
+  }
+}

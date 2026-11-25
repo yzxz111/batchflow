@@ -1,0 +1,246 @@
+[
+  {
+    "path": ".github/workflows/ci.yml",
+    "sha256": "92FE900C6249F71D105159E09DA1AB9C1BD8BC46E62F5F5598A7D2FD47F00601"
+  },
+  {
+    "path": "backend/pom.xml",
+    "sha256": "A10E58D511CBF305496301E2F26CCDF51AB6BDEE55A0D95574B719B7CD1746D5"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/ApiAdvice.java",
+    "sha256": "D0C248B037729B2B253DD5D3537476B90D3734580537C10F9E71377FB42649A9"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/ApiController.java",
+    "sha256": "5120E9BC6530CED2B200D8A991F5E5F6F8842B7A0FE8157851558E6C2A05AF13"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/ApiException.java",
+    "sha256": "C8E9407C64C53B920CBE2CD8B37E81F855E64A24B925028B0BD614F2012CAA66"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/BatchFlowApplication.java",
+    "sha256": "CED44AE0530074B366CFEDAC80214521625288A08ABD1C27A19349C5A3355659"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/CsvFiles.java",
+    "sha256": "4DBF4DA602073003F02884CAE8F4F5CB576A6A872286697B983FDD77669A63D6"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/HealthController.java",
+    "sha256": "C8C1613AEE7C25FC884A30228E5A7945CB8409CEDB091225514B45CA084FC835"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/Json.java",
+    "sha256": "A964F62E4355882E223158FDE4855EB71082EE6A1728B75E580D4592894056F3"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/LeaseLostException.java",
+    "sha256": "CDE952EAD578247E9A0D9F48B8106EB86A676499F0C4C601EE03FE4847945841"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/Models.java",
+    "sha256": "8392321B007B21AF25AF936DBF93D969DFD31C14BC9671447F405098D63CCBE1"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/ProductValidator.java",
+    "sha256": "C85DA5073B1E044DCC972D1F42AACE31DCF8F1640A3EE7811BE0E13531C04EFE"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/RabbitDispatch.java",
+    "sha256": "40D5DA39810E46AAAF018229EDFF587274AD6045826A7BFA45075ACA10D5E673"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/TaskEngine.java",
+    "sha256": "F2BA71D005C2CE23762B0EEDFEEA3A57F07B94043A01E63010C89B2362F15289"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/TaskRepository.java",
+    "sha256": "3A3A8D1FCC0124EAC0F160C355E2523F237DC1454514B33016098C71F963E6DB"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/TaskService.java",
+    "sha256": "5DD4695F14278FCE2E131BEB494C5F72CB9DD6B80A39B213CD4018E7FA0BAD12"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/UploadService.java",
+    "sha256": "54205AABC6D3BCEFA9DEBBE2447F6D22F7BFB90E799FC454DB9757106AE8113A"
+  },
+  {
+    "path": "backend/src/main/java/com/batchflow/WorkerRunner.java",
+    "sha256": "19FEDD7D6481B4F64FF60A99B4AC71D874F8D7419C88D7CEB974D56D140A5EF0"
+  },
+  {
+    "path": "backend/src/main/resources/application.yml",
+    "sha256": "ECABEB0BCD53B4A5B458D92FD6D969D8DCCD0B6FA6D2A2A1DF71B54DED8F9135"
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V1__initial.sql",
+    "sha256": "996833731EB72328291D664110F157CC4DAE7FD4D277DC490BD2519563AC9C89"
+  },
+  {
+    "path": "backend/src/test/java/com/batchflow/BatchFlowIntegrationTest.java",
+    "sha256": "4CAD24252CF45C54401699667C512B591928A12FCACC0229D1F9F613FE0C0DD5"
+  },
+  {
+    "path": "backend/src/test/java/com/batchflow/CsvAndValidatorTest.java",
+    "sha256": "5CA8FA7EB74152443D15797F51D16DE478303361F87E39903B5F41EAF6A522F5"
+  },
+  {
+    "path": "backend/src/test/java/com/batchflow/WorkerRunnerAndRabbitDispatchTest.java",
+    "sha256": "0E9B752E83023E3CDC5B30F636030D7C4FC83BCA2A6196E7DA7743244BFB4CBB"
+  },
+  {
+    "path": "deploy/compose.yaml",
+    "sha256": "4F98858E82BDDDE811E8F9A66CCFB0CA2D337983224E8CDCEF38A4D032E69685"
+  },
+  {
+    "path": "deploy/Dockerfile",
+    "sha256": "F56CFF822C4FF5C17D76369FC14BE0278BABECF6665F3F9DBE5F63F77FA890CE"
+  },
+  {
+    "path": "scripts/benchmark.mjs",
+    "sha256": "E589F4F4045CC31034D9F8B5E5C499663E295670BE24AC883424FB7F5E324488"
+  },
+  {
+    "path": "scripts/check-env.ps1",
+    "sha256": "299E8D5C9BE3DCCC531FC2BADCCDB90AA40CCEE6E9425C79F8C477E68E3B4B5C"
+  },
+  {
+    "path": "scripts/Check-Local.ps1",
+    "sha256": "D95C6AFC0FB7E7B3C75C4F670953E0C28952B9CDC864E02FCDE8A34E4EA1E91B"
+  },
+  {
+    "path": "scripts/e2e-browser.py",
+    "sha256": "3FF9A4A6336A17CD76504CD54AD7BEAAF077DD1854B3ACFE1E13993884BA553E"
+  },
+  {
+    "path": "scripts/env.ps1",
+    "sha256": "FFA1BCBAB894E975F91087AE667A36093E448988FAEA68927345391AC6A98299"
+  },
+  {
+    "path": "scripts/Export-Evidence.ps1",
+    "sha256": "B373B6348500BA2089C7015F8DE9967BB544BCFE629B026A2EAD85FC74C172FD"
+  },
+  {
+    "path": "scripts/generate-sample.mjs",
+    "sha256": "42333AF3044C526CF82AD6856CE29D4DDF315B4C91B188D95E21F4359027A518"
+  },
+  {
+    "path": "scripts/local-processes.ps1",
+    "sha256": "492C01B64EB8BC8E45A40B3740FCA6C56EB95A6809DDD5D74F62D1B917F8CCDE"
+  },
+  {
+    "path": "scripts/mvn.ps1",
+    "sha256": "285B2BC0F16166899BAC2F1AC2F91D0DB4D0A94090507DECB5369BE8A1956527"
+  },
+  {
+    "path": "scripts/Restart-Worker.ps1",
+    "sha256": "BECCDE02BF8F4E42DC6D2300FBE6821F2024AD391F238786D50F0E123A813C25"
+  },
+  {
+    "path": "scripts/Start-Database.ps1",
+    "sha256": "8A8FE442F509B267F53997876A5430793ABAEFDFA0DB30AC2BB85B4A4D8E13EA"
+  },
+  {
+    "path": "scripts/Start-Local.ps1",
+    "sha256": "604DA58D136E80099C55E7FB7B99312419DBC8050C5E5467EEE13368B91C585C"
+  },
+  {
+    "path": "scripts/Stop-Database.ps1",
+    "sha256": "D2443D811A867CBEAF70C9AAE2206DBAC6679B63956FC9A2E74C54D55534A933"
+  },
+  {
+    "path": "scripts/Stop-Local.ps1",
+    "sha256": "FB9E18F4271611B32DBF0C7545B6509474A3F0B4C0A37FCE1E247D22F02AE01C"
+  },
+  {
+    "path": "scripts/verify-compose.mjs",
+    "sha256": "AF6E00AD751E26B0EF46AD8FE88BA8319C5A0D919FE842DFF0E8EE08A2DE45DA"
+  },
+  {
+    "path": "scripts/Verify-Local.ps1",
+    "sha256": "D6E8F6C7BF559A7813E8B3FA4D9012BF39AF881B2A22BA1A9D8CD12DB13558E7"
+  },
+  {
+    "path": "scripts/Verify-RabbitMQ.ps1",
+    "sha256": "8C42FF27A4CC09D267D703ADAF2EDFDA39FE6E945A6C1F0EA8333CB40009F003"
+  },
+  {
+    "path": "web/index.html",
+    "sha256": "6942263BFEC8EC27D675FD23AA9AE3FEB6674A47964B7F1EE3CE81F5D5F87B7D"
+  },
+  {
+    "path": "web/package.json",
+    "sha256": "735AF6AB146215DE53DC3E7B4C6BCFD1E16668F15D4AB0A6809B47A0BECFC9A5"
+  },
+  {
+    "path": "web/pnpm-lock.yaml",
+    "sha256": "A5E9ECED26ED02E3F559483E3DCDB3904193313E3E68FC73C4671471505D932F"
+  },
+  {
+    "path": "web/pnpm-workspace.yaml",
+    "sha256": "AC02D96368617C760F093CFE61FDEC64B6244007AB3553E0D6621F706F54A353"
+  },
+  {
+    "path": "web/src/api.test.ts",
+    "sha256": "B96082681EB654064E6AA1367434F613E8CFFCC3EA6BF64A8354B7936086FC9F"
+  },
+  {
+    "path": "web/src/api.ts",
+    "sha256": "0BC7E307E83F51E669156043837C9FA1895B019291E7D323574C90DBF113C4DD"
+  },
+  {
+    "path": "web/src/App.vue",
+    "sha256": "5053C330B0149F68C6748F8897BB7E2B749B32A71BD13FE9FC0233324E50F64D"
+  },
+  {
+    "path": "web/src/components.test.ts",
+    "sha256": "75E9EAD067A2C25690B2B3CE822F3E5545EFA4B9E311C7C704BE8AE997C61A52"
+  },
+  {
+    "path": "web/src/components/ImportWizard.vue",
+    "sha256": "4EE89B8F94F1959DED97E1BFDDE67169D841D5FB3C8A6D3C10F63EA4A85F655A"
+  },
+  {
+    "path": "web/src/components/StatusBadge.vue",
+    "sha256": "95B3476AB9EFC5061767DCAD08A06EF2B501B406E74D8E4A73803A3FD216E90F"
+  },
+  {
+    "path": "web/src/components/TaskDrawer.vue",
+    "sha256": "C34AA4EE3457DA65CBADFC3E7CDA11DEA37E98C9BF5914EC721CDF8A51AE624F"
+  },
+  {
+    "path": "web/src/components/TaskTable.vue",
+    "sha256": "3D0621B198614CDCAB1E5713AF1E882DF10F8A75F9AB249D7A886C2CFF77D5A5"
+  },
+  {
+    "path": "web/src/main.ts",
+    "sha256": "0D42FB6BB74A51D647F20A0CD2BCDCC7B89B146F4CDFBF6F1F7B640E7E036119"
+  },
+  {
+    "path": "web/src/style.css",
+    "sha256": "25B392BAFDDD331DDAA59DBDF8A770E4F4AFA9B39B8D5B6E09F5428D91ED1355"
+  },
+  {
+    "path": "web/src/types.ts",
+    "sha256": "572A0FF3B952948B6362B600B3D8C117664236E3ADFDC8B331130F1B87B7EDF1"
+  },
+  {
+    "path": "web/src/utils.test.ts",
+    "sha256": "BAC2DE3DB49EA92836C395545699A23C1FEFE921220C66900C068D867AD46C15"
+  },
+  {
+    "path": "web/src/utils.ts",
+    "sha256": "CFD08BEF611B8EDC131402698793E0DF10473E80E0BB1214B96AB66DF41B0288"
+  },
+  {
+    "path": "web/tsconfig.json",
+    "sha256": "F28127BEC5CB02AF5DDA1C1CFA446844D657FBE361A7B7BA9C34482ACD6F6603"
+  },
+  {
+    "path": "web/vite.config.ts",
+    "sha256": "41EAB18EE2155DEF172C7B9641B2C7FE8E0B897E7A918D04C3BBA1A2007390BA"
+  }
+]

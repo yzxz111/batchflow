@@ -1,0 +1,2 @@
+# Preserve verification hashes across Git checkouts; evidence is immutable bytes.
+docs/evidence/** -text

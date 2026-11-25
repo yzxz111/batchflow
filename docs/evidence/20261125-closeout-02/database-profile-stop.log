@@ -1,0 +1,3 @@
+Stopped project worker process 51424.
+Stopped project api process 3676.
+PostgreSQL remains running. Use -StopDatabase to stop it as well.

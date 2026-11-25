@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-11-25T08:45:42.2983510Z",
+  "cpu": {
+    "Name": "AMD Ryzen 7 8745H w/ Radeon 780M Graphics",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  },
+  "operatingSystem": {
+    "Caption": "Microsoft Windows 11 家庭版 中文版",
+    "Version": "10.0.26200",
+    "OSArchitecture": "64 位",
+    "TotalVisibleMemorySize": 20710392
+  },
+  "profile": "One local API and one Worker, shared PostgreSQL 17.7; benchmark Worker batch delay 0ms; synthetic fixtures",
+  "scope": "Hardware facts only; no user identifiers, environment variables, network configuration or credentials collected"
+}

@@ -1,0 +1,6 @@
+The project PostgreSQL cluster is already running.
+PostgreSQL ready: jdbc:postgresql://127.0.0.1:15439/batchflow (user=batchflow, local demo trust authentication).
+Started api as PID 3676 on 127.0.0.1:18090.
+Started worker as PID 28816 on 127.0.0.1:18091.
+BatchFlow is ready: http://127.0.0.1:18090
+API and Worker are independent background processes. Logs: .runtime/logs/

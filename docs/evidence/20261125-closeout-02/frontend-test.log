@@ -1,0 +1,13 @@
+
+ RUN  v3.2.4 E:/deep/批量数据处理与任务调度平台/web
+
+ ✓ src/utils.test.ts (76 tests) 24ms
+ ✓ src/api.test.ts (7 tests) 10ms
+ ✓ src/components.test.ts (4 tests) 161ms
+
+ Test Files  3 passed (3)
+      Tests  87 passed (87)
+   Start at  16:43:09
+   Duration  1.62s (transform 378ms, setup 0ms, collect 750ms, tests 195ms, environment 800ms, prepare 538ms)
+
+JSON report written to E:/deep/批量数据处理与任务调度平台/.runtime/evidence/local/20261125-closeout-02/frontend-vitest.json

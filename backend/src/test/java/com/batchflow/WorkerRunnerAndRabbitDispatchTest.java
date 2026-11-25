@@ -103,7 +103,7 @@ class WorkerRunnerAndRabbitDispatchTest {
     }
 
     @Test
-    void rabbitPublisherMarksPublishedOnAckAndRetriesOnNackOrReturn() {
+    void rabbitPublisherMarksPublishedOnAckAndRetriesOnReturnedMessage() {
         JdbcTemplate jdbc = mock(JdbcTemplate.class);
         TransactionTemplate tx = new TransactionTemplate() {
             @Override
@@ -146,5 +146,54 @@ class WorkerRunnerAndRabbitDispatchTest {
         verify(jdbc).update(contains("SET attempts=attempts+1"), errCaptor.capture(), eq(8L));
         assertTrue(errCaptor.getValue().contains("消息未被可靠路由到队列"));
         verify(jdbc, never()).update(contains("SET published_at=now()"), eq(8L));
+    }
+
+    @Test
+    void rabbitPublisherRetriesOnBrokerNackWithoutMarkingPublished() {
+        JdbcTemplate jdbc = mock(JdbcTemplate.class);
+        RabbitTemplate rabbit = mock(RabbitTemplate.class);
+        RabbitDispatch.Publisher publisher = new RabbitDispatch.Publisher(jdbc, immediateTransaction(), rabbit);
+        when(jdbc.queryForList(contains("FROM task_outbox")))
+                .thenReturn(List.of(Map.of("id", 9L, "task_id", "t-nack")))
+                .thenReturn(List.of());
+        doAnswer(inv -> {
+            CorrelationData cd = inv.getArgument(3);
+            cd.getFuture().complete(new CorrelationData.Confirm(false, "simulated broker NACK"));
+            return null;
+        }).when(rabbit).convertAndSend(eq(RabbitDispatch.EXCHANGE), eq("import"), eq("t-nack"), any(CorrelationData.class));
+
+        publisher.publish();
+
+        ArgumentCaptor<String> error = ArgumentCaptor.forClass(String.class);
+        verify(jdbc).update(contains("SET attempts=attempts+1"), error.capture(), eq(9L));
+        assertTrue(error.getValue().contains("消息未被可靠路由到队列"));
+        verify(jdbc, never()).update(contains("SET published_at=now()"), eq(9L));
+    }
+
+    @Test
+    void rabbitPublisherRetriesWhenConfirmActuallyTimesOut() {
+        JdbcTemplate jdbc = mock(JdbcTemplate.class);
+        RabbitTemplate rabbit = mock(RabbitTemplate.class);
+        RabbitDispatch.Publisher publisher = new RabbitDispatch.Publisher(jdbc, immediateTransaction(), rabbit);
+        when(jdbc.queryForList(contains("FROM task_outbox")))
+                .thenReturn(List.of(Map.of("id", 10L, "task_id", "t-timeout")))
+                .thenReturn(List.of());
+        // Leave the real confirm future incomplete. Publisher's bounded five-second get must time out.
+        publisher.publish();
+
+        ArgumentCaptor<String> error = ArgumentCaptor.forClass(String.class);
+        verify(rabbit).convertAndSend(eq(RabbitDispatch.EXCHANGE), eq("import"), eq("t-timeout"), any(CorrelationData.class));
+        verify(jdbc).update(contains("SET attempts=attempts+1"), error.capture(), eq(10L));
+        assertTrue(error.getValue().contains("TimeoutException"));
+        verify(jdbc, never()).update(contains("SET published_at=now()"), eq(10L));
+    }
+
+    private static TransactionTemplate immediateTransaction() {
+        return new TransactionTemplate() {
+            @Override
+            public <T> T execute(TransactionCallback<T> action) {
+                return action.doInTransaction(mock(TransactionStatus.class));
+            }
+        };
     }
 }

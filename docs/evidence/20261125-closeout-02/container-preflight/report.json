@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKED",
+  "startedAt": "2026-11-25T08:37:48.273Z",
+  "commit": null,
+  "project": "batchflow-smoke-39d0a224-678",
+  "reportDir": "E:\\deep\\批量数据处理与任务调度平台\\.runtime\\evidence\\container-preflight\\2026-11-25T08-37-48-270Z-e13da9f8",
+  "checks": [
+    {
+      "name": "docker_preflight",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-25T08:37:48.278Z",
+      "finishedAt": "2026-11-25T08:37:48.288Z",
+      "error": "docker-version: spawn docker ENOENT; see 001-docker-version.*.log"
+    }
+  ],
+  "failureStage": "docker_preflight",
+  "error": {
+    "message": "docker-version: spawn docker ENOENT; see 001-docker-version.*.log",
+    "stack": "Error: docker-version: spawn docker ENOENT; see 001-docker-version.*.log\n    at command (file:///E:/deep/%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8E%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0/scripts/verify-compose.mjs:85:30)\n    at async file:///E:/deep/%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8E%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0/scripts/verify-compose.mjs:189:20\n    at async check (file:///E:/deep/%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8E%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0/scripts/verify-compose.mjs:98:21)\n    at async verify (file:///E:/deep/%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8E%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0/scripts/verify-compose.mjs:188:3)\n    at async file:///E:/deep/%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8E%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0/scripts/verify-compose.mjs:322:3"
+  },
+  "finishedAt": "2026-11-25T08:37:48.288Z"
+}
